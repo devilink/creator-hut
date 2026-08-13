@@ -817,6 +817,45 @@ body {
     .creators-grid-section, .header-section { padding: 4rem 1.5rem !important; }
 }
 
+    
+/* Hamburger Menu CSS */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 100;
+}
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-light);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+@media (max-width: 768px) {
+    .hamburger { display: flex; }
+    .navbar { flex-direction: row !important; justify-content: space-between; align-items: center; position: relative; }
+    .nav-links { 
+        display: none !important; 
+        position: absolute; 
+        top: 100%; 
+        left: 0; 
+        width: 100%; 
+        background: rgba(50, 0, 0, 0.95); 
+        backdrop-filter: blur(12px); 
+        flex-direction: column !important; 
+        padding: 2rem !important; 
+        border-radius: 20px; 
+        border: 1px solid rgba(255,255,255,0.1);
+        z-index: 99;
+    }
+    .nav-links.active { display: flex !important; }
+    .hamburger.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+}
+
     </style>
 
 <style>
@@ -919,6 +958,45 @@ body {
     .creators-grid-section, .header-section { padding: 4rem 1.5rem !important; }
 }
 
+    
+/* Hamburger Menu CSS */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 100;
+}
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-light);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+@media (max-width: 768px) {
+    .hamburger { display: flex; }
+    .navbar { flex-direction: row !important; justify-content: space-between; align-items: center; position: relative; }
+    .nav-links { 
+        display: none !important; 
+        position: absolute; 
+        top: 100%; 
+        left: 0; 
+        width: 100%; 
+        background: rgba(50, 0, 0, 0.95); 
+        backdrop-filter: blur(12px); 
+        flex-direction: column !important; 
+        padding: 2rem !important; 
+        border-radius: 20px; 
+        border: 1px solid rgba(255,255,255,0.1);
+        z-index: 99;
+    }
+    .nav-links.active { display: flex !important; }
+    .hamburger.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+}
+
     </style>
 
 </head>
@@ -934,6 +1012,9 @@ body {
                 <li><a href="index.html#cases">CASES</a></li>
                 <li><a href="creators.html">Creators</a></li>
             </ul>
+            <div class="hamburger">
+                <span></span><span></span><span></span>
+            </div>
         </nav>
     </header>
 
@@ -2466,6 +2547,17 @@ body {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     
+
+    <script>
+        // Hamburger Menu Logic
+        document.querySelectorAll('.hamburger').forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.classList.toggle('active');
+                this.previousElementSibling.classList.toggle('active');
+            });
+        });
+    </script>
+
 </body>
 
 </html>
