@@ -796,7 +796,7 @@ body {
     .main-title { font-size: 3rem !important; }
     .typography-header { padding: 0 1.5rem !important; flex-direction: column !important; gap: 1rem !important; }
     
-    .navbar { padding: 1rem !important; flex-direction: column !important; gap: 1rem; }
+    /* .navbar replaced below */
     .nav-links { gap: 1rem !important; flex-wrap: wrap; justify-content: center; }
     .hero-desc-box { width: 100% !important; padding: 1rem !important; }
     
@@ -835,7 +835,22 @@ body {
 }
 @media (max-width: 768px) {
     .hamburger { display: flex; }
-    .navbar { flex-direction: row !important; justify-content: space-between; align-items: center; position: relative; z-index: 9999; }
+    .navbar { 
+        flex-direction: row !important; 
+        justify-content: space-between; 
+        align-items: center; 
+        position: relative; 
+        z-index: 9999;
+        border-radius: 0 !important;
+        margin-top: -1.5rem !important;
+        margin-left: -1rem !important;
+        margin-right: -1rem !important;
+        width: calc(100% + 2rem) !important;
+        padding: 0.8rem 1rem !important;
+        border-top: none !important;
+        border-left: none !important;
+        border-right: none !important;
+    }
     .nav-links { 
         display: none !important; 
         position: absolute; 
@@ -937,7 +952,7 @@ body {
     .main-title { font-size: 3rem !important; }
     .typography-header { padding: 0 1.5rem !important; flex-direction: column !important; gap: 1rem !important; }
     
-    .navbar { padding: 1rem !important; flex-direction: column !important; gap: 1rem; }
+    /* .navbar replaced below */
     .nav-links { gap: 1rem !important; flex-wrap: wrap; justify-content: center; }
     .hero-desc-box { width: 100% !important; padding: 1rem !important; }
     
@@ -976,7 +991,22 @@ body {
 }
 @media (max-width: 768px) {
     .hamburger { display: flex; }
-    .navbar { flex-direction: row !important; justify-content: space-between; align-items: center; position: relative; z-index: 9999; }
+    .navbar { 
+        flex-direction: row !important; 
+        justify-content: space-between; 
+        align-items: center; 
+        position: relative; 
+        z-index: 9999;
+        border-radius: 0 !important;
+        margin-top: -1.5rem !important;
+        margin-left: -1rem !important;
+        margin-right: -1rem !important;
+        width: calc(100% + 2rem) !important;
+        padding: 0.8rem 1rem !important;
+        border-top: none !important;
+        border-left: none !important;
+        border-right: none !important;
+    }
     .nav-links { 
         display: none !important; 
         position: absolute; 
@@ -1003,14 +1033,16 @@ body {
 <body>
     <header class="hero" style="min-height: auto; padding-bottom: 2rem;">
         <nav class="navbar">
-            <div class="logo">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M12 2L2 22h20L12 2z"/></svg> <!-- Placeholder for R= logo -->
+            <div class="logo" style="display: flex; align-items: center; gap: 12px;">
+                <img src="assets/logo.png" alt="Logo" style="height: 35px; width: auto; object-fit: contain;">
+                <img src="assets/namelogo.png" alt="Creator Hut" style="height: 30px; width: auto; object-fit: contain;">
             </div>
-            <ul class="nav-links">
+            <ul class="nav-links" style="align-items: center;">
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="index.html#services">SERVICES</a></li>
                 <li><a href="index.html#cases">CASES</a></li>
-                <li><a href="creators.html">Creators</a></li>
+                <li><a href="creators.html">CREATORS</a></li>
+                <li><a href="https://wa.me/919395228160" target="_blank" class="nav-btn">CONTACT</a></li>
             </ul>
             <div class="hamburger">
                 <span></span><span></span><span></span>
