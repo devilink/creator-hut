@@ -809,8 +809,8 @@ body {
     
 /* Responsive Media Queries */
 @media (max-width: 768px) {
-    .hero { padding: 1.5rem 1rem !important; min-height: auto !important; }
-    .hero-container { display: flex !important; flex-direction: column !important; align-items: center !important; text-align: center !important; gap: 1.5rem !important; padding-bottom: 1rem !important; margin-top: 1rem; }
+    .hero { padding: 1.5rem 1rem !important; min-height: calc(100vh + 40px) !important; min-height: calc(100svh + 40px) !important; justify-content: center !important; }
+    .hero-container { display: flex !important; flex-direction: column !important; align-items: center !important; text-align: center !important; gap: 1.5rem !important; padding-bottom: 1rem !important; margin-top: 1rem; justify-content: center !important; flex: 1; }
     .hero-left, .hero-right { display: flex !important; flex-direction: column !important; align-items: center !important; width: 100%; }
     .hero-right { order: -1; }
     .hero-label { margin-bottom: 1.5rem !important; text-align: center; font-size: 1.5rem !important; width: 100%; }
