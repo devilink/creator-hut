@@ -810,9 +810,10 @@ body {
 /* Responsive Media Queries */
 @media (max-width: 768px) {
     .hero { padding: 1.5rem 1rem !important; min-height: auto !important; }
-    .hero-container { display: flex !important; flex-direction: column !important; gap: 1.5rem !important; padding-bottom: 1rem !important; margin-top: 1rem; }
+    .hero-container { display: flex !important; flex-direction: column !important; align-items: center !important; text-align: center !important; gap: 1.5rem !important; padding-bottom: 1rem !important; margin-top: 1rem; }
+    .hero-left, .hero-right { display: flex !important; flex-direction: column !important; align-items: center !important; width: 100%; }
     .hero-right { order: -1; }
-    .hero-label { margin-bottom: 1.5rem !important; text-align: center; font-size: 1.5rem !important; }
+    .hero-label { margin-bottom: 1.5rem !important; text-align: center; font-size: 1.5rem !important; width: 100%; }
     .hero-stats { justify-content: center; flex-wrap: nowrap; gap: 1rem; }
     .stat-card { width: 50% !important; max-width: 160px; padding: 1rem !important; }
     .main-title { font-size: 3rem !important; text-align: center !important; margin-bottom: 1rem !important; }
@@ -960,7 +961,7 @@ body {
 
         <div class="projects-content">
             <div class="section-label">
-                OUR<br>LATEST<br>CAMPAIGNS
+                HUT<br>OF<br>CREATORS
             </div>
             <div class="projects-desc">
                 <p>Creator Hut builds influencer campaigns that cut through the noise. We combine brand strategy with top-tier content creators to drive authentic engagement. Since our launch, we've partnered with...</p>
