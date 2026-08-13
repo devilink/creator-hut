@@ -805,6 +805,34 @@ body {
     .process-grid { grid-template-columns: 1fr; }
     .footer-links { flex-direction: column; gap: 1rem; }
 }
+    
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .massive-text { font-size: 2.5rem !important; line-height: 1.1; }
+    .main-title { font-size: 3rem !important; }
+    .typography-header { padding: 0 1.5rem !important; flex-direction: column !important; gap: 1rem !important; }
+    
+    .navbar { padding: 1rem !important; flex-direction: column !important; gap: 1rem; }
+    .nav-links { gap: 1rem !important; flex-wrap: wrap; justify-content: center; }
+    .hero-desc-box { width: 100% !important; padding: 1rem !important; }
+    
+    .projects-grid { grid-template-columns: 1fr !important; }
+    .services-container { flex-direction: column !important; }
+    .service-col { border-right: none !important; border-bottom: 1px solid var(--text-dark); width: 100% !important; padding: 2rem 1.5rem !important; }
+    .process-grid { grid-template-columns: 1fr !important; }
+    .impact-stats { flex-direction: column !important; gap: 2rem !important; }
+    .footer-section { flex-direction: column !important; text-align: center; padding: 4rem 1.5rem !important; }
+    .footer-links { flex-direction: column !important; gap: 1.5rem !important; }
+    .brand-grid-container { grid-template-columns: repeat(2, 1fr) !important; gap: 1rem !important; }
+    
+    .brand-grid-section, .projects-section, .services-section, .impact-section, .process-section, .reels-section {
+        padding: 4rem 1.5rem !important;
+    }
+    
+    .marquee-content span { font-size: 2.5rem !important; }
+    .creators-grid-section, .header-section { padding: 4rem 1.5rem !important; }
+}
+
     </style>
 </head>
 <body>
