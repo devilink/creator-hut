@@ -1,0 +1,2415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creator Hut | Creative & Influencer Agency</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Using a modern sans-serif font to match the aesthetic -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* ROOT VARIABLES & RESET */
+:root {
+    --bg-dark: #2a0808; /* Deep burgundy/black for hero */
+    --bg-light: #f3f3f1; /* Off-white for content */
+    --text-dark: #1a1a1a;
+    --text-light: #f3f3f1;
+    --accent-red: #d32f2f;
+    --font-main: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    overflow-x: clip;
+}
+
+/* TYPOGRAPHY UTILITIES */
+.text-outline {
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--text-dark);
+}
+
+.massive-text {
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* HERO SECTION */
+.hero {
+    min-height: 100vh;
+    padding: 2rem 4rem;
+    position: relative;
+    background: linear-gradient(rgba(23, 3, 3, 0.4), rgba(23, 3, 3, 0.8)), url('https://images.unsplash.com/photo-1636971828014-0f3493cba88a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    margin-bottom: 4rem;
+    background: rgb(50, 0, 0);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 2rem;
+    align-items: end;
+    flex-grow: 1;
+    padding-bottom: 2rem;
+}
+
+.hero-label {
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    margin-bottom: 4rem;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 1rem;
+}
+
+.stat-card {
+    padding: 1.5rem;
+    border-radius: 12px;
+    width: 140px;
+}
+
+.light-card {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+.light-card h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.light-card p {
+    font-size: 0.7rem;
+}
+
+.dark-card {
+    background-color: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.hero-img {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+    mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+}
+
+.main-title {
+    font-size: 5rem;
+    line-height: 0.9;
+    text-align: right;
+    margin-bottom: 2rem;
+}
+
+.hero-desc-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    text-align: right;
+    max-width: 300px;
+    margin-left: auto;
+}
+
+.hero-desc-box p {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+.icon-btn {
+    background: transparent;
+    border: 1px solid var(--text-light);
+    color: var(--text-light);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* BRAND SPIRAL SECTION */
+.brand-spiral-section {
+    height: 150vh;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    position: relative;
+    overflow: hidden;
+    z-index: 1; /* Above hero but below projects */
+}
+.spiral-container {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1200px;
+    overflow: hidden;
+}
+.spiral-wrapper {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+}
+.brand-logo-item {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    top: 50%;
+    left: 50%;
+    margin-top: -60px;
+    margin-left: -60px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    backface-visibility: visible;
+}
+.brand-logo-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* LIGHT SECTIONS (Projects, Services, Impact) */
+.section-light {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    padding: 6rem 4rem;
+    border-radius: 40px 40px 0 0;
+    margin-top: -40px;
+    position: relative;
+    z-index: 2;
+}
+
+/* PROJECTS SECTION */
+.typography-header {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 6rem;
+}
+
+.asterisk {
+    color: var(--accent-red);
+    font-size: 5rem;
+    line-height: 0.8;
+}
+
+.projects-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr;
+    gap: 2rem;
+    align-items: end;
+}
+
+.section-label {
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--text-dark);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.projects-desc p {
+    font-size: 0.9rem;
+    max-width: 300px;
+    color: #555;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.projects-grid img {
+    width: 100%;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* SERVICES SECTION */
+.services-section {
+    padding-top: 2rem;
+}
+
+.services-desc {
+    max-width: 600px;
+    margin: 2rem auto 4rem;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.services-row {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding-bottom: 2rem;
+}
+
+.service-card {
+    flex: 1;
+    min-width: 250px;
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.service-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    filter: brightness(0.7) contrast(1.2) sepia(0.5) hue-rotate(-20deg) saturate(2); /* Red tint effect */
+}
+
+.service-card h3 {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    color: var(--text-light);
+    font-size: 1.5rem;
+    line-height: 1.1;
+}
+
+.service-card.active {
+    flex: 1.5;
+}
+.service-card.active img {
+    filter: none;
+}
+
+/* MARQUEE SECTION */
+.marquee-wrapper {
+    width: 100vw;
+    overflow: hidden;
+    background: rgb(50, 0, 0);
+    color: var(--text-light);
+    padding: 3rem 0;
+    margin-bottom: 8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 10;
+}
+
+.marquee-row {
+    display: flex;
+    width: fit-content;
+}
+
+.marquee-content {
+    white-space: nowrap;
+    animation: marquee 50s linear infinite;
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+.marquee-content.reverse {
+    animation: marquee-reverse 50s linear infinite;
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--text-light);
+}
+
+.marquee-content span {
+    padding-right: 3rem;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+@keyframes marquee-reverse {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}
+
+/* IMPACT SECTION */
+.impact-section {
+    padding-top: 2rem;
+    padding-bottom: 8rem;
+}
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 2rem;
+    margin-top: 5rem;
+    align-items: end;
+}
+
+.impact-col-left .img-tall {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+}
+
+.impact-footer {
+    display: flex;
+    gap: 1rem;
+}
+
+.asterisk-small {
+    color: var(--accent-red);
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.impact-footer p {
+    font-size: 0.8rem;
+    color: #555;
+}
+
+.red-box {
+    background: linear-gradient(135deg, #ff4d4d 0%, #b30000 100%);
+    border-radius: 16px;
+    padding: 2rem;
+    height: 100%;
+    min-height: 300px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.red-box p {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.icon-btn-small {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.impact-col-right .img-square {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 1.5rem;
+}
+
+.explore-btn {
+    width: 100%;
+    padding: 1rem;
+    background: transparent;
+    border: 1px solid var(--text-dark);
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.explore-btn:hover {
+    background: var(--text-dark);
+    color: var(--text-light);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+    .massive-text { font-size: 3rem; }
+    .hero-container { grid-template-columns: 1fr; text-align: center; }
+    .hero-right { text-align: center; }
+    .main-title { text-align: center; font-size: 4rem; }
+    .hero-desc-box { margin: 0 auto; text-align: center; justify-content: center; }
+    .projects-content { grid-template-columns: 1fr; }
+    .impact-grid { grid-template-columns: 1fr; }
+}
+/* ANIMATIONS */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+.delay-1 { transition-delay: 0.15s; }
+.delay-2 { transition-delay: 0.3s; }
+.delay-3 { transition-delay: 0.45s; }
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+.fade-in.active {
+    opacity: 1;
+}
+
+/* REELS SECTION */
+.reels-section {
+    padding: 6rem 0;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    overflow: hidden;
+    position: relative;
+}
+
+.reels-header {
+    padding: 0 4rem;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.reels-icon {
+    width: 3rem;
+    height: 3rem;
+    background: var(--text-dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+    flex-shrink: 0;
+}
+
+.reels-slider-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 2rem;
+}
+
+.reels-drag-indicator {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5rem;
+    height: 5rem;
+    background: var(--text-dark);
+    color: var(--text-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    z-index: 20;
+    pointer-events: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.drag-slider {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    padding: 0 4rem 2rem 4rem;
+    cursor: grab;
+    user-select: none;
+    scrollbar-width: none; /* Firefox */
+}
+
+.drag-slider::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+
+.drag-slider.active {
+    cursor: grabbing;
+}
+
+.reels-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex-shrink: 0;
+}
+
+.reels-group h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #888;
+}
+
+.reels-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.reels-item {
+    width: 16rem;
+    aspect-ratio: 3/4;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    pointer-events: none;
+}
+
+.reels-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    pointer-events: auto;
+}
+
+.reels-item:hover img {
+    transform: scale(1.05);
+}
+
+/* PROCESS SECTION */
+.process-section {
+    padding: 8rem 4rem;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin-top: 4rem;
+    border-top: 2px solid var(--text-dark);
+    padding-top: 3rem;
+}
+.process-step h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.process-step p {
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* FIND CREATOR SECTION */
+.find-creator-section {
+    padding: 8rem 4rem;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+.search-filter-box {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+}
+.search-input {
+    padding: 1rem 1.5rem;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+.search-input:focus {
+    border-color: var(--text-dark);
+}
+.filter-select {
+    padding: 1rem 1.5rem;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    background: white;
+    outline: none;
+    cursor: pointer;
+}
+.creators-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+.creator-card {
+    border-radius: 16px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.creator-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+.creator-img-wrap {
+    width: 100%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+}
+.creator-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.creator-card:hover .creator-img-wrap img {
+    transform: scale(1.05);
+}
+.creator-info {
+    padding: 1.5rem;
+}
+.creator-name {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+.creator-niche {
+    color: var(--accent-red);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+.creator-stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+}
+
+/* TESTIMONIALS SECTION */
+.testimonials-section {
+    padding: 8rem 4rem;
+    background-color: var(--text-dark);
+    color: var(--text-light);
+    text-align: center;
+}
+.testimonial-text {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 500;
+    line-height: 1.2;
+    max-width: 1000px;
+    margin: 0 auto 3rem;
+}
+.testimonial-author {
+    color: var(--accent-red);
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* FOOTER SECTION */
+.footer-section {
+    padding: 6rem 4rem 2rem;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    text-align: center;
+}
+.footer-massive {
+    font-size: clamp(4rem, 12vw, 15rem);
+    font-weight: 800;
+    line-height: 0.8;
+    margin-bottom: 4rem;
+    letter-spacing: -5px;
+    color: var(--text-light);
+}
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 2rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 1024px) {
+    .process-grid { grid-template-columns: 1fr; }
+    .footer-links { flex-direction: column; gap: 1rem; }
+}
+    </style>
+
+<style>
+.creators-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.creator-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 1.5rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.creator-list-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+.creator-list-info {
+    flex: 2;
+}
+.creator-name {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+.creator-niche {
+    color: var(--accent-red);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+.creator-list-stats {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+.creator-list-action {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+.creator-list-action .explore-btn {
+    width: auto;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+    margin: 0;
+    color: var(--text-dark);
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .creator-list-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+    .creator-list-action {
+        width: 100%;
+    }
+    .creator-list-action .explore-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+</style>
+
+</head>
+<body>
+    <header class="hero" style="min-height: auto; padding-bottom: 2rem;">
+        <nav class="navbar">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M12 2L2 22h20L12 2z"/></svg> <!-- Placeholder for R= logo -->
+            </div>
+            <ul class="nav-links">
+                <li><a href="star.html">HOME</a></li>
+                <li><a href="star.html#services">SERVICES</a></li>
+                <li><a href="star.html#cases">CASES</a></li>
+                <li><a href="creators.html">Creators</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="find-creator-section" id="find-creator" style="padding-top: 4rem;">
+        <h2 class="massive-text text-center reveal">
+            FIND <span class="text-outline">YOUR</span> CREATOR
+        </h2>
+        <div>
+            <p class="text-center" style="color: #555; max-width: 600px; margin: 1rem auto 3rem;">
+                Browse through our curated list of world-class creators and influencers to find the perfect match for your next campaign.
+            </p>
+            
+            <div class="search-filter-box">
+                <input type="text" class="search-input" placeholder="Search creators by name, niche, or platform...">
+                <select class="filter-select">
+                    <option>All Niches</option>
+                    <option>Lifestyle & Vlogs</option>
+                    <option>Infotainment</option>
+                    <option>Content Creator</option>
+                </select>
+                <button class="explore-btn" style="width: auto; padding: 1rem 2rem; background: var(--text-dark); color: var(--text-light); border-radius: 30px;">SEARCH</button>
+            </div>
+
+            <div class="creators-list">
+
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Dimpu Baruah</h3>
+                        <p class="creator-niche">Lifestyle / Daily Vlogger</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>1.3M</strong> Followers</span>
+                        <span>Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Dimpu%20Baruah" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Karan Deka</h3>
+                        <p class="creator-niche">Content Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>233K</strong> Followers</span>
+                        <span>Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Karan%20Deka" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Bikash Chetry</h3>
+                        <p class="creator-niche">Lifestyle / Daily Vlogger</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>582K</strong> Followers</span>
+                        <span>Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Bikash%20Chetry" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Bhukhan Pathak</h3>
+                        <p class="creator-niche">Infotainment</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>154K</strong> Followers</span>
+                        <span>Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Bhukhan%20Pathak" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Ananya Kashyap</h3>
+                        <p class="creator-niche">Content Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>772K</strong> Followers</span>
+                        <span>Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Ananya%20Kashyap" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Dipak Sharma</h3>
+                        <p class="creator-niche">Finance</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>33.2K</strong> Followers</span>
+                        <span>Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Dipak%20Sharma" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Dhanashri Baishya</h3>
+                        <p class="creator-niche">Lifestyle / Daily Vlogger</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>77.2K</strong> Followers</span>
+                        <span>Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Dhanashri%20Baishya" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Bishal Hazarika</h3>
+                        <p class="creator-niche">Content Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>189K</strong> Followers</span>
+                        <span>Upper Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Bishal%20Hazarika" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Lazy Guy</h3>
+                        <p class="creator-niche">Infotainment</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>132K</strong> Followers</span>
+                        <span>Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Lazy%20Guy" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Aboyob Bhuyan</h3>
+                        <p class="creator-niche">Content Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>65.3K</strong> Followers</span>
+                        <span>Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Aboyob%20Bhuyan" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Arfelish Bordoloi</h3>
+                        <p class="creator-niche">Content Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>245K</strong> Followers</span>
+                        <span>Upper Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Arfelish%20Bordoloi" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Unscripted Assam</h3>
+                        <p class="creator-niche">Infotainment</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>N/A</strong> Followers</span>
+                        <span>Upper Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Unscripted%20Assam" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Suvimol Gogoi</h3>
+                        <p class="creator-niche">Content Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>62K</strong> Followers</span>
+                        <span>Guwahati</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Suvimol%20Gogoi" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Kalyani Konwar</h3>
+                        <p class="creator-niche">Lifestyle / Daily Vlogger</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>235K</strong> Followers</span>
+                        <span>Guwahati</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Kalyani%20Konwar" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Sneha Rajkhowa</h3>
+                        <p class="creator-niche">Lifestyle / Daily Vlogger</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>247K</strong> Followers</span>
+                        <span>Sibsagar</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Sneha%20Rajkhowa" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Dimpigogoi</h3>
+                        <p class="creator-niche">Lifestyle / Daily Vlogger</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>328K</strong> Followers</span>
+                        <span>Dibrugarh</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Dimpigogoi" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Anindita Das</h3>
+                        <p class="creator-niche">Lifestyle / Daily Vlogger</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>204K</strong> Followers</span>
+                        <span>Nalbari</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Anindita%20Das" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Krishnaa Kashyap</h3>
+                        <p class="creator-niche">Lifestyle / Daily Vlogger</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>171K</strong> Followers</span>
+                        <span>Nalbari</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Krishnaa%20Kashyap" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Rakhi Deka</h3>
+                        <p class="creator-niche">Lifestyle / Daily Vlogger</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>193K</strong> Followers</span>
+                        <span>Mangaldai</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Rakhi%20Deka" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Ariyan</h3>
+                        <p class="creator-niche">Content Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>120K</strong> Followers</span>
+                        <span>Guwahati</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Ariyan" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Nihal Kalita</h3>
+                        <p class="creator-niche">Content Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>129K</strong> Followers</span>
+                        <span>Guwahati</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Nihal%20Kalita" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">pluiebird</h3>
+                        <p class="creator-niche">Content Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>139K</strong> Followers</span>
+                        <span>Guwahati</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20pluiebird" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Debika Rani</h3>
+                        <p class="creator-niche">Lifestyle / Daily Vlogger</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>113K</strong> Followers</span>
+                        <span>Guwahati</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Debika%20Rani" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Nayan Jyoti</h3>
+                        <p class="creator-niche">Content Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>182K</strong> Followers</span>
+                        <span>Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Nayan%20Jyoti" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Sagarika Borah</h3>
+                        <p class="creator-niche">Lifestyle / Daily Vlogger</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>126K</strong> Followers</span>
+                        <span>Tezpur</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Sagarika%20Borah" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">sumsum</h3>
+                        <p class="creator-niche">Lifestyle / Daily Vlogger</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>111K</strong> Followers</span>
+                        <span>Nagaon</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20sumsum" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Anuu Das</h3>
+                        <p class="creator-niche">Lifestyle / Daily Vlogger</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>142K</strong> Followers</span>
+                        <span>Duliajan</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Anuu%20Das" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Jyotishma Sarania</h3>
+                        <p class="creator-niche">Lifestyle / Daily Vlogger</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>96.5K</strong> Followers</span>
+                        <span>Tamulpur</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Jyotishma%20Sarania" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Leena Das</h3>
+                        <p class="creator-niche">Lifestyle / Daily Vlogger</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>103K</strong> Followers</span>
+                        <span>Guwahati</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Leena%20Das" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Maharnav Bhardwaj</h3>
+                        <p class="creator-niche">Infotainment</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>127K</strong> Followers</span>
+                        <span>Upper Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Maharnav%20Bhardwaj" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Hrishikesh Sarma</h3>
+                        <p class="creator-niche">Infotainment</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>189K</strong> Followers</span>
+                        <span>Lower Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Hrishikesh%20Sarma" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">From Assam (Jahid Ahmed)</h3>
+                        <p class="creator-niche">Infotainment</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>83K</strong> Followers</span>
+                        <span>Lower Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20From%20Assam%20(Jahid%20Ahmed)" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">JSS Unscripted</h3>
+                        <p class="creator-niche">Infotainment</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>737K</strong> Followers</span>
+                        <span>Upper Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20JSS%20Unscripted" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Purbanchal (Bhaskar Dutta)</h3>
+                        <p class="creator-niche">Infotainment</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>418K</strong> Followers</span>
+                        <span>Upper Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Purbanchal%20(Bhaskar%20Dutta)" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Heavy Budget (Bonny Deori)</h3>
+                        <p class="creator-niche">Content Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>632K</strong> Followers</span>
+                        <span>Guwahati</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Heavy%20Budget%20(Bonny%20Deori)" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Nipu Ahmed</h3>
+                        <p class="creator-niche">Content Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>108K</strong> Followers</span>
+                        <span>Lower Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Nipu%20Ahmed" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Ahiran Sarma</h3>
+                        <p class="creator-niche">Infotainment</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>48.5K</strong> Followers</span>
+                        <span>Lower Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Ahiran%20Sarma" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Produnaya Chutia</h3>
+                        <p class="creator-niche">Content Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>417K</strong> Followers</span>
+                        <span>Upper Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Produnaya%20Chutia" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Jubilee Bordoloi</h3>
+                        <p class="creator-niche">Content Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>67K</strong> Followers</span>
+                        <span>Guwahati</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Jubilee%20Bordoloi" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Deepjyoti Kashyap</h3>
+                        <p class="creator-niche">Infotainment</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>58.3K</strong> Followers</span>
+                        <span>Central Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Deepjyoti%20Kashyap" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Assam Jet</h3>
+                        <p class="creator-niche">Infotainment</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>68K</strong> Followers</span>
+                        <span>Central Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Assam%20Jet" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">M. Rahman</h3>
+                        <p class="creator-niche">Infotainment</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>N/A</strong> Followers</span>
+                        <span>Barak Valley</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20M.%20Rahman" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Hiya Nath</h3>
+                        <p class="creator-niche">Lifestyle / Daily Vlogger</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>71K</strong> Followers</span>
+                        <span>Guwahati</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Hiya%20Nath" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">M A N Editor</h3>
+                        <p class="creator-niche">Content Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>91K</strong> Followers</span>
+                        <span>Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20M%20A%20N%20Editor" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Rupjyoti Nath</h3>
+                        <p class="creator-niche">Lifestyle / Daily Vlogger</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>56K</strong> Followers</span>
+                        <span>North Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Rupjyoti%20Nath" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Jintee</h3>
+                        <p class="creator-niche">Content Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>66.7K</strong> Followers</span>
+                        <span>Guwahati</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Jintee" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Mintu Dancer</h3>
+                        <p class="creator-niche">Content Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>51K</strong> Followers</span>
+                        <span>Dibrugarh</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Mintu%20Dancer" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Nilakshi R Sarma</h3>
+                        <p class="creator-niche">Lifestyle / Daily Vlogger</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>69K</strong> Followers</span>
+                        <span>Guwahati</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Nilakshi%20R%20Sarma" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Dhritiman Kalita</h3>
+                        <p class="creator-niche">Lifestyle / Daily Vlogger</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>49.9K</strong> Followers</span>
+                        <span>Lower Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Dhritiman%20Kalita" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Voklandu</h3>
+                        <p class="creator-niche">Infotainment</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>N/A</strong> Followers</span>
+                        <span>North Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Voklandu" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">O Bolo Namaskar</h3>
+                        <p class="creator-niche">Infotainment</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>N/A</strong> Followers</span>
+                        <span>Lower Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20O%20Bolo%20Namaskar" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Biswajit Rabha</h3>
+                        <p class="creator-niche">Content Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>N/A</strong> Followers</span>
+                        <span>Upper Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Biswajit%20Rabha" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Rabbani Shyam</h3>
+                        <p class="creator-niche">Content Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>N/A</strong> Followers</span>
+                        <span>Lower Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Rabbani%20Shyam" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Nibir Bora</h3>
+                        <p class="creator-niche">Content Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>N/A</strong> Followers</span>
+                        <span>Upper Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Nibir%20Bora" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Krishangi Saikia</h3>
+                        <p class="creator-niche">Lifestyle / Daily Vlogger</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>N/A</strong> Followers</span>
+                        <span>Lower Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Krishangi%20Saikia" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Afreen</h3>
+                        <p class="creator-niche">Lifestyle / Daily Vlogger</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>N/A</strong> Followers</span>
+                        <span>Lower Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Afreen" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Kongkon Talukdar</h3>
+                        <p class="creator-niche">Content Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>N/A</strong> Followers</span>
+                        <span>Lower Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Kongkon%20Talukdar" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Rimi Kashyap</h3>
+                        <p class="creator-niche">Lifestyle / Daily Vlogger</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>N/A</strong> Followers</span>
+                        <span>North Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Rimi%20Kashyap" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Pulak Nixasor</h3>
+                        <p class="creator-niche">Content Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>N/A</strong> Followers</span>
+                        <span>Lower Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Pulak%20Nixasor" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Pakhi Rajbonshi</h3>
+                        <p class="creator-niche">Lifestyle / Daily Vlogger</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>N/A</strong> Followers</span>
+                        <span>Middle Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Pakhi%20Rajbonshi" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Rajashree Das</h3>
+                        <p class="creator-niche">Lifestyle / Daily Vlogger</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>N/A</strong> Followers</span>
+                        <span>Guwahati</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Rajashree%20Das" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Hrittize Baruah</h3>
+                        <p class="creator-niche">Lifestyle / Daily Vlogger</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>N/A</strong> Followers</span>
+                        <span>Tezpur</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Hrittize%20Baruah" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Geetika Devi</h3>
+                        <p class="creator-niche">Lifestyle / Daily Vlogger</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>N/A</strong> Followers</span>
+                        <span>Tezpur</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Geetika%20Devi" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Dhruba Das</h3>
+                        <p class="creator-niche">Content Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>N/A</strong> Followers</span>
+                        <span>Lower Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Dhruba%20Das" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Sagar Jyoti Borah</h3>
+                        <p class="creator-niche">Lifestyle / Daily Vlogger</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>N/A</strong> Followers</span>
+                        <span>Guwahati</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Sagar%20Jyoti%20Borah" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Saini Devi</h3>
+                        <p class="creator-niche">Lifestyle / Daily Vlogger</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>N/A</strong> Followers</span>
+                        <span>Lower Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Saini%20Devi" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Geetu Moni</h3>
+                        <p class="creator-niche">Lifestyle / Daily Vlogger</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>N/A</strong> Followers</span>
+                        <span>Middle Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Geetu%20Moni" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Priyakhi Mozinder Boruah</h3>
+                        <p class="creator-niche">Lifestyle/Vlogger</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>36.3K</strong> Followers</span>
+                        <span>Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Priyakhi%20Mozinder%20Boruah" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Chinmoyee Duwarah</h3>
+                        <p class="creator-niche">Content Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>93.4k</strong> Followers</span>
+                        <span>Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Chinmoyee%20Duwarah" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Chajida Begum</h3>
+                        <p class="creator-niche">Lifestyle/Vlogger</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>57.1K</strong> Followers</span>
+                        <span>Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Chajida%20Begum" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Ragini Sharma</h3>
+                        <p class="creator-niche">Model/Actor</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>12.3K</strong> Followers</span>
+                        <span>Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Ragini%20Sharma" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">B A R N A L I</h3>
+                        <p class="creator-niche">Model/Content Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>13.4K</strong> Followers</span>
+                        <span>Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20B%20A%20R%20N%20A%20L%20I" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">linashree</h3>
+                        <p class="creator-niche">Digital Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>29K</strong> Followers</span>
+                        <span>Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20linashree" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Nishita Kashyap</h3>
+                        <p class="creator-niche">Public Figure</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>19.5K</strong> Followers</span>
+                        <span>Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Nishita%20Kashyap" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Angkita Chetry</h3>
+                        <p class="creator-niche">Fashion Model</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>15.5K</strong> Followers</span>
+                        <span>Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Angkita%20Chetry" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Nihal Kalita</h3>
+                        <p class="creator-niche">Digital Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>128K</strong> Followers</span>
+                        <span>Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Nihal%20Kalita" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Abhijit Das</h3>
+                        <p class="creator-niche">Content Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>71.3K</strong> Followers</span>
+                        <span>Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Abhijit%20Das" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Isha Nath</h3>
+                        <p class="creator-niche">Arts & Entertainment</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>50.7K</strong> Followers</span>
+                        <span>Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Isha%20Nath" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Suralakshmi Sonowal</h3>
+                        <p class="creator-niche">Creator UGC</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>9.3K</strong> Followers</span>
+                        <span>Golaghat</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Suralakshmi%20Sonowal" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Diilani Devi</h3>
+                        <p class="creator-niche">Artist</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>32.6K</strong> Followers</span>
+                        <span>Guwahati</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Diilani%20Devi" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Anamika Hazarika</h3>
+                        <p class="creator-niche">Model</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>12K</strong> Followers</span>
+                        <span>Guwahati</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Anamika%20Hazarika" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Simakshi Baisha</h3>
+                        <p class="creator-niche">Model</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>8.1K</strong> Followers</span>
+                        <span>Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Simakshi%20Baisha" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Banasri Bharadwaz</h3>
+                        <p class="creator-niche">Makeup Artist</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>29.8K</strong> Followers</span>
+                        <span>Guwahati</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Banasri%20Bharadwaz" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Sunayana Gogoi</h3>
+                        <p class="creator-niche">Digital Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>8.2K</strong> Followers</span>
+                        <span>Guwahati</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Sunayana%20Gogoi" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Sai Rimpi</h3>
+                        <p class="creator-niche">Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>11.4K</strong> Followers</span>
+                        <span>Jorhat</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Sai%20Rimpi" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Sarita Limbu</h3>
+                        <p class="creator-niche">Dancer</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>80.6K</strong> Followers</span>
+                        <span>Golaghat</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Sarita%20Limbu" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Anandita</h3>
+                        <p class="creator-niche">Vlogger</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>98.2K</strong> Followers</span>
+                        <span>Guwahati</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Anandita" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Prastuti Medhi</h3>
+                        <p class="creator-niche">Digital Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>60.9K</strong> Followers</span>
+                        <span>Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Prastuti%20Medhi" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Karishmita Das</h3>
+                        <p class="creator-niche">Digital Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>170K</strong> Followers</span>
+                        <span>Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Karishmita%20Das" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Amardeep</h3>
+                        <p class="creator-niche">Streamer</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>14.9K</strong> Followers</span>
+                        <span>Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Amardeep" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Rajashree Barman</h3>
+                        <p class="creator-niche">Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>59.1K</strong> Followers</span>
+                        <span>Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Rajashree%20Barman" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Stacy Ihungdim</h3>
+                        <p class="creator-niche">Reel Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>34K</strong> Followers</span>
+                        <span>Manipur</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Stacy%20Ihungdim" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Korobi Bsmtry</h3>
+                        <p class="creator-niche">Digital Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>14.9K</strong> Followers</span>
+                        <span>Meghalaya</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Korobi%20Bsmtry" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Prabolya Protim</h3>
+                        <p class="creator-niche">Digital Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>24.2K</strong> Followers</span>
+                        <span>Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Prabolya%20Protim" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Anjali Thounaojam</h3>
+                        <p class="creator-niche">Reel Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>50.1K</strong> Followers</span>
+                        <span>Manipur</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Anjali%20Thounaojam" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Angun S Langkam</h3>
+                        <p class="creator-niche">Reel Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>39.7K</strong> Followers</span>
+                        <span>Arunachal</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Angun%20S%20Langkam" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Techi Anung</h3>
+                        <p class="creator-niche">Reel Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>77.3K</strong> Followers</span>
+                        <span>Arunachal</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Techi%20Anung" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Luffy Rai</h3>
+                        <p class="creator-niche">Content Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>23.8K</strong> Followers</span>
+                        <span>Sikkim</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Luffy%20Rai" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Kim Pretty</h3>
+                        <p class="creator-niche">Content Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>39.3K</strong> Followers</span>
+                        <span>Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Kim%20Pretty" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Chika Naga</h3>
+                        <p class="creator-niche">Digital Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>9.6K</strong> Followers</span>
+                        <span>Nagaland</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Chika%20Naga" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Mr Kanak</h3>
+                        <p class="creator-niche">Travel Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>9.6K</strong> Followers</span>
+                        <span>Tripura</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Mr%20Kanak" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Visse Angami</h3>
+                        <p class="creator-niche">Reel Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>11.6K</strong> Followers</span>
+                        <span>Nagaland</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Visse%20Angami" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Nika Kappo</h3>
+                        <p class="creator-niche">Content Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>35.4K</strong> Followers</span>
+                        <span>Nagaland</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Nika%20Kappo" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Maynumpetch</h3>
+                        <p class="creator-niche">Reel Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>107K</strong> Followers</span>
+                        <span>Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Maynumpetch" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Chanchui Khayi</h3>
+                        <p class="creator-niche">Public Figure</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>55.8K</strong> Followers</span>
+                        <span>Manipur</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Chanchui%20Khayi" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Kumrila Quinker</h3>
+                        <p class="creator-niche">Digital Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>12.3K</strong> Followers</span>
+                        <span>Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Kumrila%20Quinker" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Neme</h3>
+                        <p class="creator-niche">Digital Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>173K</strong> Followers</span>
+                        <span>Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Neme" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Ngapu Gadi</h3>
+                        <p class="creator-niche">Digital Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>67.2K</strong> Followers</span>
+                        <span>Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Ngapu%20Gadi" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Bara Atey</h3>
+                        <p class="creator-niche">Vlogger</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>6.7K</strong> Followers</span>
+                        <span>Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Bara%20Atey" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Menguseu Suokhrie</h3>
+                        <p class="creator-niche">Artist</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>63.7K</strong> Followers</span>
+                        <span>Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Menguseu%20Suokhrie" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Yami</h3>
+                        <p class="creator-niche">Reel Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>11.2K</strong> Followers</span>
+                        <span>Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Yami" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Nikita</h3>
+                        <p class="creator-niche">Content Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>9.4K</strong> Followers</span>
+                        <span>Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Nikita" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+                <div class="creator-list-item">
+                    <div class="creator-list-info">
+                        <h3 class="creator-name">Abhilasha Neog</h3>
+                        <p class="creator-niche">Content Creator</p>
+                    </div>
+                    <div class="creator-list-stats">
+                        <span><strong>45.5K</strong> Followers</span>
+                        <span>Assam</span>
+                    </div>
+                    <div class="creator-list-action">
+                        <a href="https://wa.me/919395228160?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20Abhilasha%20Neog" target="_blank" class="explore-btn">CONTACT VIA WHATSAPP ↗</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 4rem;">
+                <button class="explore-btn" style="width: auto; padding: 1rem 3rem; font-size: 1.1rem; border-radius: 30px;">LOAD MORE CREATORS</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-section">
+        <h2 class="footer-massive reveal">LET'S TALK</h2>
+        <div class="footer-links fade-in delay-1">
+            <div class="footer-col">© 2026 CREATOR HUT AGENCY</div>
+            <div class="footer-col">
+                <a href="#" style="color:white; text-decoration:none; margin:0 10px;">INSTAGRAM</a>
+                <a href="#" style="color:white; text-decoration:none; margin:0 10px;">TWITTER</a>
+                <a href="#" style="color:white; text-decoration:none; margin:0 10px;">LINKEDIN</a>
+            </div>
+            <div class="footer-col">HELLO@CREATORHUT.AGENCY</div>
+        </div>
+    </footer>
+    <!-- INTERSECTION OBSERVER SCRIPT FOR ANIMATIONS -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            const elementsToAnimate = document.querySelectorAll('.reveal, .fade-in');
+            elementsToAnimate.forEach(el => observer.observe(el));
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+</body>
+
+</html>

@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creator Hut | Creative & Influencer Agency</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Using a modern sans-serif font to match the aesthetic -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* ROOT VARIABLES & RESET */
+:root {
+    --bg-dark: #2a0808; /* Deep burgundy/black for hero */
+    --bg-light: #f3f3f1; /* Off-white for content */
+    --text-dark: #1a1a1a;
+    --text-light: #f3f3f1;
+    --accent-red: #d32f2f;
+    --font-main: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    overflow-x: clip;
+}
+
+/* TYPOGRAPHY UTILITIES */
+.text-outline {
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--text-dark);
+}
+
+.massive-text {
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* HERO SECTION */
+.hero {
+    min-height: 100vh;
+    padding: 2rem 4rem;
+    position: relative;
+    background: linear-gradient(rgba(23, 3, 3, 0.4), rgba(23, 3, 3, 0.8)), url('https://images.unsplash.com/photo-1636971828014-0f3493cba88a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    margin-bottom: 4rem;
+    background: rgb(50, 0, 0);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+}
+
+.nav-btn {
+    background: white;
+    color: var(--text-dark) !important;
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.nav-btn:hover {
+    background: #e0e0e0;
+    transform: scale(1.05);
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 2rem;
+    align-items: end;
+    flex-grow: 1;
+    padding-bottom: 2rem;
+}
+
+.hero-label {
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    margin-bottom: 4rem;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 1rem;
+}
+
+.stat-card {
+    padding: 1.5rem;
+    border-radius: 12px;
+    width: 140px;
+}
+
+.light-card {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+.light-card h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.light-card p {
+    font-size: 0.7rem;
+}
+
+.dark-card {
+    background-color: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.hero-img {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+    mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+}
+
+.main-title {
+    font-size: 5rem;
+    line-height: 0.9;
+    text-align: right;
+    margin-bottom: 2rem;
+}
+
+.hero-desc-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    text-align: right;
+    max-width: 300px;
+    margin-left: auto;
+}
+
+.hero-desc-box p {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+.icon-btn {
+    background: transparent;
+    border: 1px solid var(--text-light);
+    color: var(--text-light);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* BRAND GRID SECTION */
+.brand-grid-section {
+    padding: 6rem 4rem;
+    background: radial-gradient(circle at center, #ffffff 0%, #f0f0ee 100%);
+    color: var(--text-dark);
+    position: relative;
+    z-index: 1; 
+}
+.brand-grid-container {
+    max-width: 1200px;
+    margin: 4rem auto 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+    align-items: center;
+    justify-items: center;
+}
+.brand-logo-item {
+    width: 100%;
+    max-width: 200px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.brand-logo-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    filter: contrast(1.1); /* slightly boost contrast */
+    transition: transform 0.3s ease;
+}
+.brand-logo-item:hover img {
+    transform: scale(1.15);
+}
+
+/* LIGHT SECTIONS (Projects, Services, Impact) */
+.section-light {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    padding: 6rem 4rem;
+    border-radius: 40px 40px 0 0;
+    margin-top: -40px;
+    position: relative;
+    z-index: 2;
+}
+
+/* PROJECTS SECTION */
+.typography-header {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 6rem;
+}
+
+.asterisk {
+    color: var(--accent-red);
+    font-size: 5rem;
+    line-height: 0.8;
+}
+
+.projects-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr;
+    gap: 2rem;
+    align-items: end;
+}
+
+.section-label {
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--text-dark);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.projects-desc p {
+    font-size: 0.9rem;
+    max-width: 300px;
+    color: #555;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.projects-grid img {
+    width: 100%;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* SERVICES SECTION */
+.services-section {
+    padding-top: 2rem;
+}
+
+.services-desc {
+    max-width: 600px;
+    margin: 2rem auto 4rem;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.services-row {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding-bottom: 2rem;
+}
+
+.service-card {
+    flex: 1;
+    min-width: 250px;
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.service-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    filter: brightness(0.7) contrast(1.2) sepia(0.5) hue-rotate(-20deg) saturate(2); /* Red tint effect */
+}
+
+.service-card h3 {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    color: var(--text-light);
+    font-size: 1.5rem;
+    line-height: 1.1;
+}
+
+.service-card.active {
+    flex: 1.5;
+}
+.service-card.active img {
+    filter: none;
+}
+
+/* MARQUEE SECTION */
+.marquee-wrapper {
+    width: 100vw;
+    overflow: hidden;
+    background: rgb(50, 0, 0);
+    color: var(--text-light);
+    padding: 3rem 0;
+    margin-bottom: 8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 10;
+}
+
+.marquee-row {
+    display: flex;
+    width: fit-content;
+}
+
+.marquee-content {
+    white-space: nowrap;
+    animation: marquee 50s linear infinite;
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+.marquee-content.reverse {
+    animation: marquee-reverse 50s linear infinite;
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--text-light);
+}
+
+.marquee-content span {
+    padding-right: 3rem;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+@keyframes marquee-reverse {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}
+
+/* IMPACT SECTION */
+.impact-section {
+    padding-top: 2rem;
+    padding-bottom: 8rem;
+}
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 2rem;
+    margin-top: 5rem;
+    align-items: end;
+}
+
+.impact-col-left .img-tall {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+}
+
+.impact-footer {
+    display: flex;
+    gap: 1rem;
+}
+
+.asterisk-small {
+    color: var(--accent-red);
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.impact-footer p {
+    font-size: 0.8rem;
+    color: #555;
+}
+
+.red-box {
+    background: linear-gradient(135deg, #ff4d4d 0%, #b30000 100%);
+    border-radius: 16px;
+    padding: 2rem;
+    height: 100%;
+    min-height: 300px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.red-box p {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.icon-btn-small {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.impact-col-right .img-square {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 1.5rem;
+}
+
+.explore-btn {
+    width: 100%;
+    padding: 1rem;
+    background: transparent;
+    border: 1px solid var(--text-dark);
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.explore-btn:hover {
+    background: var(--text-dark);
+    color: var(--text-light);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+    .massive-text { font-size: 3rem; }
+    .hero-container { grid-template-columns: 1fr; text-align: center; }
+    .hero-right { text-align: center; }
+    .main-title { text-align: center; font-size: 4rem; }
+    .hero-desc-box { margin: 0 auto; text-align: center; justify-content: center; }
+    .projects-content { grid-template-columns: 1fr; }
+    .impact-grid { grid-template-columns: 1fr; }
+}
+/* ANIMATIONS */
+.reveal { opacity: 0; transform: translateY(40px); transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+.reveal.active { opacity: 1; transform: translateY(0); }
+
+.reveal-slide-left { opacity: 0; transform: translateX(50px); transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+.reveal-slide-left.active { opacity: 1; transform: translateX(0); }
+
+.reveal-slide-right { opacity: 0; transform: translateX(-50px); transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+.reveal-slide-right.active { opacity: 1; transform: translateX(0); }
+
+.reveal-scale { opacity: 0; transform: scale(0.9); transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+.reveal-scale.active { opacity: 1; transform: scale(1); }
+
+.reveal-blur { opacity: 0; filter: blur(15px); transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+.reveal-blur.active { opacity: 1; filter: blur(0); }
+
+/* Fast wipe effect mimicking typing/revealing text */
+.reveal-type {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    transition: clip-path 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.reveal-type.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.delay-1 { transition-delay: 0.15s; }
+.delay-2 { transition-delay: 0.3s; }
+.delay-3 { transition-delay: 0.45s; }
+.fade-in { opacity: 0; transition: opacity 1s ease; }
+.fade-in.active { opacity: 1; }
+
+/* REELS SECTION */
+.reels-section {
+    padding: 6rem 0;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    overflow: hidden;
+    position: relative;
+}
+
+.reels-header {
+    padding: 0 4rem;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.reels-icon {
+    width: 3rem;
+    height: 3rem;
+    background: var(--text-dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+    flex-shrink: 0;
+}
+
+.reels-slider-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 2rem;
+}
+
+.reels-drag-indicator {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5rem;
+    height: 5rem;
+    background: var(--text-dark);
+    color: var(--text-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    z-index: 20;
+    pointer-events: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.drag-slider {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    padding: 0 4rem 2rem 4rem;
+    cursor: grab;
+    user-select: none;
+    scrollbar-width: none; /* Firefox */
+}
+
+.drag-slider::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+
+.drag-slider.active {
+    cursor: grabbing;
+}
+
+.reels-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex-shrink: 0;
+}
+
+.reels-group h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #888;
+}
+
+.reels-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.reels-item {
+    width: 16rem;
+    aspect-ratio: 3/4;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    pointer-events: none;
+}
+
+.reels-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    pointer-events: auto;
+}
+
+.reels-item:hover img {
+    transform: scale(1.05);
+}
+
+/* PROCESS SECTION */
+.process-section {
+    padding: 8rem 4rem;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin-top: 4rem;
+    border-top: 2px solid var(--text-dark);
+    padding-top: 3rem;
+}
+.process-step h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.process-step p {
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* FIND CREATOR SECTION */
+.find-creator-section {
+    padding: 8rem 4rem;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+.search-filter-box {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+}
+.search-input {
+    padding: 1rem 1.5rem;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+.search-input:focus {
+    border-color: var(--text-dark);
+}
+.filter-select {
+    padding: 1rem 1.5rem;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    background: white;
+    outline: none;
+    cursor: pointer;
+}
+.creators-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+.creator-card {
+    border-radius: 16px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.creator-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+.creator-img-wrap {
+    width: 100%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+}
+.creator-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.creator-card:hover .creator-img-wrap img {
+    transform: scale(1.05);
+}
+.creator-info {
+    padding: 1.5rem;
+}
+.creator-name {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+.creator-niche {
+    color: var(--accent-red);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+.creator-stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+}
+
+/* TESTIMONIALS SECTION */
+.testimonials-section {
+    padding: 8rem 4rem;
+    background-color: var(--text-dark);
+    color: var(--text-light);
+    text-align: center;
+}
+.testimonial-text {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 500;
+    line-height: 1.2;
+    max-width: 1000px;
+    margin: 0 auto 3rem;
+}
+.testimonial-author {
+    color: var(--accent-red);
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* FOOTER SECTION */
+.footer-section {
+    padding: 6rem 4rem 2rem;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    text-align: center;
+}
+.footer-massive {
+    font-size: clamp(4rem, 12vw, 15rem);
+    font-weight: 800;
+    line-height: 0.8;
+    margin-bottom: 4rem;
+    letter-spacing: -5px;
+    color: var(--text-light);
+}
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 2rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 1024px) {
+    .process-grid { grid-template-columns: 1fr; }
+    .footer-links { flex-direction: column; gap: 1rem; }
+}
+    </style>
+</head>
+<body>
+
+    <!-- HERO SECTION (Dark Theme) -->
+    <header class="hero" id="home">
+        <nav class="navbar">
+            <div class="logo" style="display: flex; align-items: center; gap: 12px;">
+                <img src="./assets/logo.png" alt="Logo" style="height: 35px; width: auto; object-fit: contain;">
+                <img src="./assets/namelogo.png" alt="Creator Hut" style="height: 30px; width: auto; object-fit: contain;">
+            </div>
+            <ul class="nav-links" style="align-items: center;">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#services">SERVICES</a></li>
+                <li><a href="#cases">CASES</a></li>
+                <li><a href="creators.html">CREATORS</a></li>
+                <li><a href="https://wa.me/919395228160" target="_blank" class="nav-btn">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero-container">
+            <div class="hero-left reveal-slide-right">
+                <h3 class="hero-label">UNITING<br>BRANDS &<br>CREATORS/</h3>
+                
+                <div class="hero-stats">
+                    <div class="stat-card light-card">
+                        <h3>10,000+</h3>
+                        <p>Creator Partnerships</p>
+                    </div>
+                    <div class="stat-card dark-card">
+                        <p>Influence<br>Culture</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Central visual area - handled largely by background in CSS or img -->
+            <div class="hero-center reveal delay-1">
+            </div>
+
+            <div class="hero-right reveal-slide-left delay-2">
+                <h1 class="main-title">CREATIVE<br>INFLUENCER<br>AGENCY</h1>
+                <div class="hero-desc-box">
+                    <p>We bridge the gap between bold brands and visionary creators. From cultural strategy to viral campaigns — we shape the digital conversation.</p>
+                    <a href="creators.html" class="icon-btn" style="text-decoration: none; color: inherit; display: flex; align-items: center; justify-content: center; font-size: inherit;">↗</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 2: ABOUT / LATEST PROJECTS (Light Theme) -->
+    <section class="section-light projects-section" id="cases">
+        <div class="typography-header reveal-type">
+            <div class="asterisk">*</div>
+            <h2 class="massive-text">
+                CREATOR HUT CONNECTS<br>
+                BRANDS & CREATORS TO<br>
+                <span class="text-outline">REDEFINE MODERN</span><br>
+                <span class="text-outline">DIGITAL CULTURE</span>
+            </h2>
+        </div>
+
+        <div class="projects-content">
+            <div class="section-label">
+                OUR<br>LATEST<br>CAMPAIGNS
+            </div>
+            <div class="projects-desc">
+                <p>Creator Hut builds influencer campaigns that cut through the noise. We combine brand strategy with top-tier content creators to drive authentic engagement. Since our launch, we've partnered with...</p>
+            </div>
+            <div class="projects-grid reveal-scale delay-1">
+                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=400" alt="Project 1">
+                <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Project 2">
+                <img src="https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&q=80&w=400" alt="Project 3">
+            </div>
+        </div>
+    </section>
+
+    <!-- BRAND GRID SECTION (Light Theme) -->
+    <section class="brand-grid-section" id="brands">
+        <h2 class="massive-text text-center reveal-type">
+            BRANDS WE <span class="text-outline">TRUST</span>
+        </h2>
+        <p class="text-center reveal delay-1" style="font-size: 1.2rem; letter-spacing: 0.2em; color: #666; text-transform: uppercase; font-weight: 600; margin-bottom: 1rem; margin-top: 1rem;">
+            Our Partner Ecosystem
+        </p>
+        
+        <div class="brand-grid-container">
+            <div class="brand-logo-item reveal delay-1"><img src="./assets/brands/IMG_7822.jpeg" alt="Brand"></div>
+            <div class="brand-logo-item reveal delay-1"><img src="./assets/brands/IMG_7823.jpeg" alt="Brand"></div>
+            <div class="brand-logo-item reveal delay-1"><img src="./assets/brands/IMG_7824.png" alt="Brand"></div>
+            <div class="brand-logo-item reveal delay-1"><img src="./assets/brands/IMG_7825.webp" alt="Brand"></div>
+            <div class="brand-logo-item reveal delay-2"><img src="./assets/brands/IMG_7826.png" alt="Brand"></div>
+            <div class="brand-logo-item reveal delay-2"><img src="./assets/brands/IMG_7827.png" alt="Brand"></div>
+            <div class="brand-logo-item reveal delay-2"><img src="./assets/brands/IMG_7828.png" alt="Brand"></div>
+            <div class="brand-logo-item reveal delay-2"><img src="./assets/brands/IMG_7830.png" alt="Brand"></div>
+            <div class="brand-logo-item reveal delay-2"><img src="./assets/brands/IMG_7831.jpeg" alt="Brand"></div>
+            <div class="brand-logo-item reveal delay-3"><img src="./assets/brands/IMG_7840.AVIF" alt="Brand"></div>
+            <div class="brand-logo-item reveal delay-3"><img src="./assets/brands/IMG_7841.PNG" alt="Brand"></div>
+            <div class="brand-logo-item reveal delay-3"><img src="./assets/brands/IMG_7842.JPG" alt="Brand"></div>
+            <div class="brand-logo-item reveal delay-3"><img src="./assets/brands/IMG_7843.PNG" alt="Brand"></div>
+            <div class="brand-logo-item reveal delay-3"><img src="./assets/brands/IMG_7844.PNG" alt="Brand"></div>
+            <div class="brand-logo-item reveal delay-3"><img src="./assets/brands/IMG_7845.PNG" alt="Brand"></div>
+            <div class="brand-logo-item reveal delay-3"><img src="./assets/brands/IMG_7846.JPG" alt="Brand"></div>
+            <div class="brand-logo-item reveal delay-3"><img src="./assets/brands/IMG_7847.JPG" alt="Brand"></div>
+            <div class="brand-logo-item reveal delay-3"><img src="./assets/brands/IMG_7849.PNG" alt="Brand"></div>
+            <div class="brand-logo-item reveal delay-3"><img src="./assets/brands/IMG_7850.WEBP" alt="Brand"></div>
+            <div class="brand-logo-item reveal delay-3"><img src="./assets/brands/IMG_7851.JPG" alt="Brand"></div>
+        </div>
+        <br>
+        <p class="text-center reveal delay-1" style="font-size: 1.2rem; letter-spacing: 0.2em; color: #666; text-transform: uppercase; font-weight: 600; margin-bottom: 1rem; margin-top: 1rem;">
+            AND MANY MORE <span style="font-size: 1.2rem; letter-spacing: 0.2em; color: #666; text-transform: uppercase; font-weight: 600; margin-bottom: 1rem; margin-top: 1rem;">+</span>
+        </p>
+    </section>
+
+    <!-- SECTION 3: SERVICES (Light Theme) -->
+    <section class="section-light services-section" id="services">
+        <h2 class="massive-text text-center">
+            EVERYTHING <span class="text-outline">BRANDS &</span><br>
+            <span class="text-outline">CREATORS</span> NEED TO GROW
+        </h2>
+        <p class="services-desc text-center">
+            Creator Hut offers influencer marketing, strategic branding, and content direction. Whether you're a brand seeking authentic voices or a creator scaling your impact, we design campaigns that deliver results.
+        </p>
+
+        <div class="services-row reveal-blur">
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=600" alt="Influencer Strategy">
+                <h3>Influencer<br>Strategy</h3>
+            </div>
+            <div class="service-card active">
+                <img src="https://images.unsplash.com/photo-1629198688000-71f23e745b6e?auto=format&fit=crop&q=80&w=600" alt="Brand Partnerships">
+                <h3>Brand<br>Partnerships</h3>
+            </div>
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1616423640778-28d1b53229bd?auto=format&fit=crop&q=80&w=600" alt="Content Creation">
+                <h3>Content<br>Creation</h3>
+            </div>
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1628017974670-846f66fc7671?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Talent Management">
+                <h3>Talent<br>Management</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- MARQUEE SECTION -->
+    <div class="marquee-wrapper reveal">
+        <div class="marquee-row">
+            <div class="marquee-content">
+                <span>CREATOR HUT * INFLUENCER MARKETING * BRAND STRATEGY * TALENT MANAGEMENT *</span>
+                <span>CREATOR HUT * INFLUENCER MARKETING * BRAND STRATEGY * TALENT MANAGEMENT *</span>
+            </div>
+            <div class="marquee-content" aria-hidden="true">
+                <span>CREATOR HUT * INFLUENCER MARKETING * BRAND STRATEGY * TALENT MANAGEMENT *</span>
+                <span>CREATOR HUT * INFLUENCER MARKETING * BRAND STRATEGY * TALENT MANAGEMENT *</span>
+            </div>
+        </div>
+        
+        <div class="marquee-row">
+            <div class="marquee-content reverse">
+                <span>CREATOR HUT * INFLUENCER MARKETING * BRAND STRATEGY * TALENT MANAGEMENT *</span>
+                <span>CREATOR HUT * INFLUENCER MARKETING * BRAND STRATEGY * TALENT MANAGEMENT *</span>
+            </div>
+            <div class="marquee-content reverse" aria-hidden="true">
+                <span>CREATOR HUT * INFLUENCER MARKETING * BRAND STRATEGY * TALENT MANAGEMENT *</span>
+                <span>CREATOR HUT * INFLUENCER MARKETING * BRAND STRATEGY * TALENT MANAGEMENT *</span>
+            </div>
+        </div>
+
+        <div class="marquee-row">
+            <div class="marquee-content">
+                <span>CREATOR HUT * INFLUENCER MARKETING * BRAND STRATEGY * TALENT MANAGEMENT *</span>
+                <span>CREATOR HUT * INFLUENCER MARKETING * BRAND STRATEGY * TALENT MANAGEMENT *</span>
+            </div>
+            <div class="marquee-content" aria-hidden="true">
+                <span>CREATOR HUT * INFLUENCER MARKETING * BRAND STRATEGY * TALENT MANAGEMENT *</span>
+                <span>CREATOR HUT * INFLUENCER MARKETING * BRAND STRATEGY * TALENT MANAGEMENT *</span>
+            </div>
+        </div>
+
+        <div class="marquee-row">
+            <div class="marquee-content reverse">
+                <span>CREATOR HUT * INFLUENCER MARKETING * BRAND STRATEGY * TALENT MANAGEMENT *</span>
+                <span>CREATOR HUT * INFLUENCER MARKETING * BRAND STRATEGY * TALENT MANAGEMENT *</span>
+            </div>
+            <div class="marquee-content reverse" aria-hidden="true">
+                <span>CREATOR HUT * INFLUENCER MARKETING * BRAND STRATEGY * TALENT MANAGEMENT *</span>
+                <span>CREATOR HUT * INFLUENCER MARKETING * BRAND STRATEGY * TALENT MANAGEMENT *</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- SECTION 4: IMPACT (Light Theme) -->
+    <section class="section-light impact-section">
+        <h2 class="massive-text text-center">
+            WE TURN IDEAS<br>
+            INTO CULTURAL MOVEMENTS<br>
+            <span class="text-outline">FROM STRATEGY TO CONTENT —</span><br>
+            IMPACT THAT LASTS
+        </h2>
+
+        <div class="impact-grid reveal-scale delay-1">
+            <div class="impact-col-left">
+                <img src="https://images.unsplash.com/photo-1646446852987-9286f631b2b8?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Visual 1" class="img-tall">
+                <div class="impact-footer">
+                    <span class="asterisk-small">*</span>
+                    <p>We build campaigns that resonate. From brand core to influencer storytelling.</p>
+                </div>
+            </div>
+            
+            <div class="impact-col-center">
+                <div class="red-box">
+                    <p>Explore our<br>world's leading<br>creators</p>
+                    <a href="creators.html" class="icon-btn-small" style="text-decoration: none; color: inherit; display: flex; align-items: center; justify-content: center; font-weight: bold;">></a>
+                </div>
+            </div>
+
+            <div class="impact-col-right">
+                <img src="https://images.unsplash.com/photo-1616412875447-096e932d893c?q=80&w=927&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Visual 2" class="img-square">
+                <a href="creators.html" class="explore-btn" style="text-decoration: none; color: inherit; display: block; text-align: center; box-sizing: border-box;">EXPLORE NOW ↗</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: PROCESS (Light Theme) -->
+    <section class="process-section">
+        <h2 class="massive-text text-center reveal-type">
+            HOW WE <span class="text-outline">OPERATE</span>
+        </h2>
+        <div class="process-grid">
+            <div class="process-step reveal">
+                <h3><span>DISCOVER</span> <span>01</span></h3>
+                <p>We dive deep into your brand or creator persona. We uncover your unique voice and identify the right audience to connect with.</p>
+            </div>
+            <div class="process-step reveal delay-1">
+                <h3><span>STRATEGY</span> <span>02</span></h3>
+                <p>We architect partnership strategies that set you apart. This is the blueprint that aligns brands with the perfect content creators.</p>
+            </div>
+            <div class="process-step reveal delay-2">
+                <h3><span>CAMPAIGN</span> <span>03</span></h3>
+                <p>We translate strategy into powerful campaigns. Authentic content and cohesive storytelling that speak volumes and command attention.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- SECTION: REELS SLIDER -->
+    <section class="reels-section">
+        <div class="reels-header reveal">
+            <h2 class="massive-text">HIGHLIGHT OF<br>CREATOR HUT</h2>
+            <div class="reels-icon">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+            </div>
+        </div>
+
+        <div class="reels-slider-wrapper reveal delay-1">
+            <div class="reels-drag-indicator">DRAG ›</div>
+            <div class="drag-slider">
+                <!-- Group 1: Oppo -->
+                <div class="reels-group">
+                    <h4>Oppo</h4>
+                    <div class="reels-row">
+                        <a href="https://www.instagram.com/reel/DPD2nNRD92v/" target="_blank" class="reels-item">
+                            <img src="./assets/reels/oppo_1.jpeg" alt="Oppo">
+                        </a>
+                        <a href="https://www.instagram.com/reel/DPGAyNlj4mc/" target="_blank" class="reels-item">
+                            <img src="./assets/reels/oppo_2.jpeg" alt="Oppo">
+                        </a>
+                        <a href="https://www.instagram.com/reel/DPF5Aw5ElmE/" target="_blank" class="reels-item">
+                            <img src="./assets/reels/oppo_3.jpeg" alt="Oppo">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Group 2: Realme -->
+                <div class="reels-group">
+                    <h4>Realme</h4>
+                    <div class="reels-row">
+                        <a href="https://www.instagram.com/reel/DWs0IKOkzW5/" target="_blank" class="reels-item">
+                            <img src="./assets/reels/realme_1.jpeg" alt="Realme">
+                        </a>
+                        <a href="https://www.instagram.com/reel/DWjBJvEiUfC/" target="_blank" class="reels-item">
+                            <img src="./assets/reels/realme_2.jpeg" alt="Realme">
+                        </a>
+                        <a href="https://www.instagram.com/reel/DDtfCcGBrim/" target="_blank" class="reels-item">
+                            <img src="./assets/reels/realme_3.jpeg" alt="Realme">
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Group 3: Bisk Farm -->
+                <div class="reels-group">
+                    <h4>Bisk Farm</h4>
+                    <div class="reels-row">
+                        <a href="https://www.instagram.com/reel/CqaqL3Vp7G5/" target="_blank" class="reels-item">
+                            <img src="./assets/reels/biskfarm_1.jpeg" alt="Bisk Farm">
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Group 4: TVS -->
+                <div class="reels-group">
+                    <h4>TVS</h4>
+                    <div class="reels-row">
+                        <a href="https://www.instagram.com/reel/DAajLMKyHck/" target="_blank" class="reels-item">
+                            <img src="./assets/reels/tvs_1.jpeg" alt="TVS">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Group 5: Kohira -->
+                <div class="reels-group">
+                    <h4>Kohira</h4>
+                    <div class="reels-row">
+                        <a href="https://www.instagram.com/reel/DEAXIxrypLj/" target="_blank" class="reels-item">
+                            <img src="./assets/reels/kohira_1.jpeg" alt="Kohira">
+                        </a>
+                        <a href="https://www.instagram.com/reel/DHBTuKMzhBZ/" target="_blank" class="reels-item">
+                            <img src="./assets/reels/kohira_2.jpeg" alt="Kohira">
+                        </a>
+                        <a href="https://www.instagram.com/reel/DIXY1v_hdxy/" target="_blank" class="reels-item">
+                            <img src="./assets/reels/kohira_3.jpeg" alt="Kohira">
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Group 6: Bingo -->
+                <div class="reels-group">
+                    <h4>Bingo</h4>
+                    <div class="reels-row">
+                        <a href="https://www.instagram.com/reel/DM1nj1DSCxG/" target="_blank" class="reels-item">
+                            <img src="./assets/reels/bingo_1.jpeg" alt="Bingo">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Group 7: Nothing -->
+                <div class="reels-group">
+                    <h4>Nothing</h4>
+                    <div class="reels-row">
+                        <a href="https://www.instagram.com/reel/DWIwmjbgegD/" target="_blank" class="reels-item">
+                            <img src="./assets/reels/nothing_1.jpeg" alt="Nothing">
+                        </a>
+                        <a href="https://www.instagram.com/reel/DWDh8ANiV4j/" target="_blank" class="reels-item">
+                            <img src="./assets/reels/nothing_2.jpeg" alt="Nothing">
+                        </a>
+                        <a href="https://www.instagram.com/reel/DWRGumLiX0s/" target="_blank" class="reels-item">
+                            <img src="./assets/reels/nothing_3.jpeg" alt="Nothing">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Group 8: Ajjas -->
+                <div class="reels-group">
+                    <h4>Ajjas</h4>
+                    <div class="reels-row">
+                        <a href="https://www.instagram.com/reel/DKgzbyFSXjO/" target="_blank" class="reels-item">
+                            <img src="./assets/reels/ajjas_1.jpeg" alt="Ajjas">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Group 9: Sunfeast -->
+                <div class="reels-group">
+                    <h4>Sunfeast</h4>
+                    <div class="reels-row">
+                        <a href="https://www.instagram.com/reel/DRUaQ_9D5Ay/" target="_blank" class="reels-item">
+                            <img src="./assets/reels/sunfeast_1.jpeg" alt="Sunfeast">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Group 10: LG -->
+                <div class="reels-group" style="padding-right: 4rem;">
+                    <h4>LG</h4>
+                    <div class="reels-row">
+                        <a href="https://www.instagram.com/reel/DP3B82FDwwT/" target="_blank" class="reels-item">
+                            <img src="./assets/reels/lg_1.jpeg" alt="LG">
+                        </a>
+                        <a href="https://www.instagram.com/reel/DIY305lvVSr/" target="_blank" class="reels-item">
+                            <img src="./assets/reels/lg_2.jpeg" alt="LG">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: TESTIMONIALS (Dark Theme) -->
+    <section class="testimonials-section">
+        <div class="reveal">
+            <h2 class="testimonial-text">"CREATOR HUT DIDN'T JUST RUN A CAMPAIGN. THEY CONNECTED US WITH CREATORS WHO REBUILT OUR ENTIRE CULTURAL FOOTPRINT."</h2>
+        </div>
+    </section>
+
+    <!-- SECTION 7: FOOTER (Dark Theme) -->
+    <footer class="footer-section">
+        <h2 class="footer-massive reveal">LET'S TALK</h2>
+        <div class="footer-links fade-in delay-1">
+            <div class="footer-col">© 2026 CREATOR HUT AGENCY</div>
+            <div class="footer-col">
+                <a href="https://www.instagram.com/biiidyut/" style="color:white; text-decoration:none; margin:0 10px;">INSTAGRAM</a>
+            </div>
+            <div class="footer-col">bidyutnayannath@gmail.com</div>
+        </div>
+    </footer>
+
+    <!-- INTERSECTION OBSERVER SCRIPT FOR ANIMATIONS -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            const elementsToAnimate = document.querySelectorAll('.reveal, .fade-in, .reveal-slide-left, .reveal-slide-right, .reveal-scale, .reveal-blur, .reveal-type');
+            elementsToAnimate.forEach(el => observer.observe(el));
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        // Reels Drag Slider Logic
+        const slider = document.querySelector('.drag-slider');
+        if (slider) {
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+            let isDragging = false;
+
+            slider.addEventListener('mousedown', (e) => {
+                isDown = true;
+                isDragging = false;
+                slider.classList.add('active');
+                startX = e.pageX - slider.offsetLeft;
+                scrollLeft = slider.scrollLeft;
+            });
+
+            slider.addEventListener('mouseleave', () => {
+                isDown = false;
+                slider.classList.remove('active');
+            });
+
+            slider.addEventListener('mouseup', () => {
+                isDown = false;
+                slider.classList.remove('active');
+                setTimeout(() => { isDragging = false; }, 0);
+            });
+
+            slider.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                isDragging = true;
+                const x = e.pageX - slider.offsetLeft;
+                const walk = (x - startX) * 1.5;
+                slider.scrollLeft = scrollLeft - walk;
+            });
+
+            const links = slider.querySelectorAll('a');
+            links.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    if (isDragging) {
+                        e.preventDefault();
+                    }
+                });
+            });
+
+            // 3D Carousel Effect
+            const items = slider.querySelectorAll('.reels-item');
+            const update3D = () => {
+                const sliderRect = slider.getBoundingClientRect();
+                const sliderCenter = sliderRect.left + sliderRect.width / 2;
+                
+                items.forEach(item => {
+                    const itemRect = item.getBoundingClientRect();
+                    const itemCenter = itemRect.left + itemRect.width / 2;
+                    
+                    const dist = itemCenter - sliderCenter;
+                    let normalizedDist = dist / (sliderRect.width * 0.5);
+                    normalizedDist = Math.max(-1, Math.min(1, normalizedDist));
+                    
+                    const rotateY = normalizedDist * 45; 
+                    const scale = 1 - Math.abs(normalizedDist) * 0.15;
+                    const z = Math.abs(normalizedDist) * -150;
+                    const opacity = 1 - Math.abs(normalizedDist) * 0.5;
+                    const zIndex = Math.round(100 - Math.abs(normalizedDist) * 100);
+                    
+                    gsap.set(item, {
+                        rotationY: rotateY,
+                        scale: scale,
+                        z: z,
+                        opacity: opacity,
+                        zIndex: zIndex,
+                        transformOrigin: "center center",
+                        transformPerspective: 1200
+                    });
+                });
+            };
+
+            slider.addEventListener('scroll', update3D);
+            window.addEventListener('resize', update3D);
+            setTimeout(update3D, 100); // Initial layout update
+        }
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        const hero = document.querySelector('.hero');
+        const projectsSection = document.querySelector('.projects-section');
+        const brandSpiralSection = document.querySelector('.brand-spiral-section');
+
+        // Pin the hero section
+        ScrollTrigger.create({
+            trigger: hero,
+            start: "top top",
+            pin: true,
+            pinSpacing: false
+        });
+
+        // Set transform origin so it shrinks towards the top center
+        gsap.set(hero, { transformOrigin: "top center" });
+        
+        // Scale down the hero section as the next section comes up
+        gsap.to(hero, {
+            scale: 0.9,
+            opacity: 0.4,
+            scrollTrigger: {
+                trigger: projectsSection,
+                start: "top bottom",
+                end: "top top",
+                scrub: true
+            }
+        });
+
+
+    </script>
+</body>
+</html>
