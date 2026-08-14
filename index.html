@@ -777,6 +777,151 @@ body {
     letter-spacing: 2px;
 }
 
+/* FOUNDER SECTION - CREATIVE */
+.founder-section {
+    padding: 10rem 4rem;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+}
+.founder-bg-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20vw;
+    font-weight: 800;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.05);
+    white-space: nowrap;
+    z-index: 0;
+    pointer-events: none;
+    line-height: 0.8;
+}
+.founder-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 6rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+.founder-img-wrapper {
+    position: relative;
+    border-radius: 200px 200px 0 0;
+    overflow: visible;
+    aspect-ratio: 3/4;
+    transform: rotate(-2deg);
+    transition: transform 0.5s ease;
+}
+.founder-img-wrapper:hover {
+    transform: rotate(0deg) translateY(-10px);
+}
+.founder-img-inner {
+    border-radius: 200px 200px 0 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+.founder-img-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.founder-img-wrapper:hover .founder-img-inner img {
+    transform: scale(1.08);
+}
+.founder-badge {
+    position: absolute;
+    top: 2rem;
+    right: -2rem;
+    background-color: var(--accent-red);
+    color: white;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 800;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    transform: rotate(15deg);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    z-index: 2;
+    line-height: 1.2;
+}
+.founder-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.founder-label-wrap {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.founder-line {
+    height: 2px;
+    width: 40px;
+    background-color: var(--accent-red);
+}
+.founder-label {
+    color: var(--accent-red);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.9rem;
+}
+.founder-name {
+    font-size: 5.5rem;
+    font-weight: 800;
+    line-height: 0.9;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+}
+.founder-name span {
+    display: block;
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--text-light);
+    font-style: italic;
+}
+.founder-bio {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 550px;
+    border-left: 1px solid rgba(255,255,255,0.2);
+    padding-left: 2rem;
+}
+.explore-btn-light {
+    border: 1px solid rgba(255,255,255,0.3);
+    color: var(--text-light);
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+}
+.explore-btn-light:hover {
+    background: white !important;
+    color: var(--text-dark) !important;
+    border-color: white;
+}
+@media (max-width: 1024px) {
+    .founder-container { grid-template-columns: 1fr; gap: 4rem; }
+    .founder-img-wrapper { max-width: 400px; margin: 0 auto; transform: rotate(0); }
+    .founder-badge { right: -1rem; }
+    .founder-name { font-size: 4rem; }
+}
+
 /* FOOTER SECTION */
 .footer-section {
     padding: 6rem 4rem 2rem;
@@ -834,7 +979,7 @@ body {
     .footer-links { flex-direction: column !important; gap: 1.5rem !important; }
     .brand-grid-container { grid-template-columns: repeat(2, 1fr) !important; gap: 1rem !important; }
     
-    .brand-grid-section, .projects-section, .services-section, .impact-section, .process-section, .reels-section {
+    .brand-grid-section, .projects-section, .services-section, .impact-section, .process-section, .reels-section, .founder-section {
         padding: 4rem 1.5rem !important;
     }
     
@@ -1009,6 +1154,32 @@ body {
         <p class="text-center reveal delay-1" style="font-size: 1.2rem; letter-spacing: 0.2em; color: #666; text-transform: uppercase; font-weight: 600; margin-bottom: 1rem; margin-top: 1rem;">
             AND MANY MORE <span style="font-size: 1.2rem; letter-spacing: 0.2em; color: #666; text-transform: uppercase; font-weight: 600; margin-bottom: 1rem; margin-top: 1rem;">+</span>
         </p>
+    </section>
+
+    <!-- FOUNDER SECTION (Creative Dark Theme) -->
+    <section class="founder-section" id="founder">
+        <div class="founder-bg-text">VISIONARY</div>
+        <div class="founder-container">
+            <div class="founder-img-wrapper reveal-slide-right">
+                <div class="founder-badge">EST.<br>2020</div>
+                <div class="founder-img-inner">
+                    <img src="assets/founder.PNG" alt="Founder Bidyut Nayan Nath">
+                </div>
+            </div>
+            <div class="founder-content reveal-slide-left delay-1">
+                <div class="founder-label-wrap">
+                    <div class="founder-line"></div>
+                    <span class="founder-label">MEET THE FOUNDER</span>
+                </div>
+                <h2 class="founder-name">BIDYUT<br><span>NAYAN NATH</span></h2>
+                <p class="founder-bio">
+                    With a deep understanding of digital culture, I started Creator Hut to bridge the gap between visionary creators and bold brands. Our mission is to elevate authentic storytelling and drive meaningful cultural impact.
+                </p>
+                <div style="margin-top: 1.5rem;">
+                    <a href="https://www.instagram.com/biiidyut/" target="_blank" class="explore-btn explore-btn-light" style="text-decoration: none; display: inline-flex; align-items: center; gap: 10px; padding: 1rem 2.5rem; width: auto; font-size: 0.9rem; letter-spacing: 0.1em; text-transform: uppercase;">FOLLOW ON INSTAGRAM <span style="font-size:1.2rem;">↗</span></a>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- SECTION: REELS SLIDER -->
