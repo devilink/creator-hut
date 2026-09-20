@@ -153,10 +153,10 @@ export default function Page() {
                 <img src="assets/namelogo.png" alt="Creator Hut" style={{"height":"30px","width":"auto","objectFit":"contain"}} />
             </div>
             <ul className="nav-links" style={{"alignItems":"center"}}>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="index.html#services">SERVICES</a></li>
-                <li><a href="index.html#cases">CASES</a></li>
-                <li><a href="creators.html">CREATORS</a></li>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/#services">SERVICES</a></li>
+                <li><a href="/#cases">CASES</a></li>
+                <li><a href="/creators">CREATORS</a></li>
                 <li><a href="https://wa.me/919395228160" target="_blank" className="nav-btn">CONTACT</a></li>
             </ul>
             <div className="hamburger">

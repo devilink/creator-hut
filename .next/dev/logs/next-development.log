@@ -1,11 +1,1 @@
-{"timestamp":"00:00:00.686","source":"Server","level":"LOG","message":""}
-{"timestamp":"00:00:02.215","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
-{"timestamp":"00:00:05.559","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
-{"timestamp":"00:03:03.059","source":"Server","level":"LOG","message":"✓ Compiled in 36ms"}
-{"timestamp":"00:03:49.898","source":"Browser","level":"ERROR","message":"Uncaught NotFoundError: Failed to execute 'insertBefore' on 'Node': The node before which the new node is to be inserted is not a child of this node.\n    at div (<anonymous>)"}
-{"timestamp":"00:03:49.898","source":"Server","level":"ERROR","message":"[browser] \"\\u001b[31mUncaught NotFoundError: Failed to execute 'insertBefore' on 'Node': The node before which the new node is to be inserted is not a child of this node.\\u001b[39m\\n\\u001b[31m    at div (<anonymous>)\\u001b[39m\""}
-{"timestamp":"00:03:49.903","source":"Browser","level":"ERROR","message":"Uncaught NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.\n    at div (<anonymous>)"}
-{"timestamp":"00:03:49.903","source":"Server","level":"ERROR","message":"[browser] \"\\u001b[31mUncaught NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.\\u001b[39m\\n\\u001b[31m    at div (<anonymous>)\\u001b[39m\""}
-{"timestamp":"00:03:49.908","source":"Browser","level":"ERROR","message":"Uncaught NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.\n    at header (<anonymous>)"}
-{"timestamp":"00:03:49.908","source":"Server","level":"ERROR","message":"[browser] \"\\u001b[31mUncaught NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.\\u001b[39m\\n\\u001b[31m    at header (<anonymous>)\\u001b[39m\""}
-{"timestamp":"00:03:51.669","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
+{"timestamp":"00:00:00.749","source":"Server","level":"LOG","message":""}

@@ -311,7 +311,7 @@ export default function Page() {
                 <li><a href="#home">HOME</a></li>
                 <li><a href="#services">SERVICES</a></li>
                 <li><a href="#cases">CASES</a></li>
-                <li><a href="creators.html">CREATORS</a></li>
+                <li><a href="/creators">CREATORS</a></li>
                 <li><a href="https://wa.me/919395228160" target="_blank" className="nav-btn">CONTACT</a></li>
             </ul>
             <div className="hamburger">
