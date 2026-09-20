@@ -1,0 +1,75 @@
+2026-08-18 16:05:46.475 INFO    hellolifefoundation-com_14c6 - strix.core.runner: Starting Strix scan hellolifefoundation-com_14c6 (image=ghcr.io/usestrix/strix-sandbox:1.3.0, max_turns=500, interactive=True, run_dir=E:\Code\Files\creatorhut\creator-hut\strix_runs\hellolifefoundation-com_14c6)
+2026-08-18 16:05:46.475 INFO    hellolifefoundation-com_14c6 - strix.core.runner: LLM model resolved: ollama/qwen2.5-coder:7b
+2026-08-18 16:05:46.475 INFO    hellolifefoundation-com_14c6 - strix.core.runner: Bringing up sandbox session for scan hellolifefoundation-com_14c6
+2026-08-18 16:05:46.475 DEBUG   hellolifefoundation-com_14c6 - strix.runtime.backends: Selected sandbox backend: docker
+2026-08-18 16:05:46.475 INFO    hellolifefoundation-com_14c6 - strix.runtime.session_manager: Creating sandbox session for scan hellolifefoundation-com_14c6 (backend=docker, image=ghcr.io/usestrix/strix-sandbox:1.3.0)
+2026-08-18 16:05:46.629 DEBUG   hellolifefoundation-com_14c6 - strix.runtime.docker_client: Creating sandbox container: image=ghcr.io/usestrix/strix-sandbox:1.3.0 caps=['NET_ADMIN', 'NET_RAW'] exposed_ports=[48080]
+2026-08-18 16:05:46.724 INFO    hellolifefoundation-com_14c6 - strix.runtime.docker_client: Sandbox container created: id=8b5e505137ad image=ghcr.io/usestrix/strix-sandbox:1.3.0
+2026-08-18 16:05:47.495 DEBUG   hellolifefoundation-com_14c6 - strix.runtime.session_manager: Caido host endpoint resolved: http://127.0.0.1:56427
+2026-08-18 16:05:47.495 INFO    hellolifefoundation-com_14c6 - strix.runtime.caido_bootstrap: Bootstrapping Caido client (host=http://127.0.0.1:56427, container=http://127.0.0.1:48080)
+2026-08-18 16:05:47.838 INFO    hellolifefoundation-com_14c6 - strix.runtime.caido_bootstrap: Caido project selected: 29cb224e-dc74-40ed-9b1e-df131eacb24c
+2026-08-18 16:05:47.838 INFO    hellolifefoundation-com_14c6 - strix.runtime.session_manager: Sandbox session for scan hellolifefoundation-com_14c6 ready and cached
+2026-08-18 16:05:47.838 INFO    hellolifefoundation-com_14c6 - strix.core.runner: Sandbox ready for scan hellolifefoundation-com_14c6
+2026-08-18 16:05:47.840 DEBUG   hellolifefoundation-com_14c6 - strix.skills: Loaded skill: scan_modes/deep -> deep
+2026-08-18 16:05:47.842 DEBUG   hellolifefoundation-com_14c6 - strix.skills: Loaded skill: tooling/agent_browser -> agent_browser
+2026-08-18 16:05:47.844 DEBUG   hellolifefoundation-com_14c6 - strix.skills: Loaded skill: tooling/python -> python
+2026-08-18 16:05:47.845 DEBUG   hellolifefoundation-com_14c6 - strix.skills: Loaded skill: coordination/root_agent -> root_agent
+2026-08-18 16:05:47.846 DEBUG   hellolifefoundation-com_14c6 - strix.skills: load_skills: 4 skill(s) resolved
+2026-08-18 16:05:47.871 DEBUG   hellolifefoundation-com_14c6 - strix.agents.prompt: render_system_prompt: scan_mode=deep root=True whitebox=False skills=4 prompt_len=79051
+2026-08-18 16:05:47.871 INFO    hellolifefoundation-com_14c6 - strix.agents.factory: Built root agent 'Root Agent' (skills=0, tools=31, scan_mode=deep, whitebox=False)
+2026-08-18 16:05:47.872 INFO    hellolifefoundation-com_14c6 - strix.core.agents: agent.register 4910b5d4 (Root Agent) parent=-
+2026-08-18 16:05:47.895 DEBUG   hellolifefoundation-com_14c6 - openai.agents: Tracing is disabled. Not creating trace
+2026-08-18 16:05:47.896 DEBUG   hellolifefoundation-com_14c6 - openai.agents: Setting current trace: no-op
+2026-08-18 16:05:47.896 DEBUG   hellolifefoundation-com_14c6 - openai.agents: Tracing is disabled. Not creating span
+2026-08-18 16:05:47.909 DEBUG   hellolifefoundation-com_14c6 - openai.agents: Tracing is disabled. Not creating span
+2026-08-18 16:05:47.909 DEBUG   hellolifefoundation-com_14c6 - openai.agents: Starting turn 1, current_agent=Root Agent
+2026-08-18 16:05:47.910 DEBUG   hellolifefoundation-com_14c6 - openai.agents: Tracing is disabled. Not creating span
+2026-08-18 16:05:47.911 DEBUG   hellolifefoundation-com_14c6 - openai.agents: No conversation_id available for request
+2026-08-18 16:05:47.911 DEBUG   hellolifefoundation-com_14c6 - openai.agents: Tracing is disabled. Not creating span
+2026-08-18 16:05:47.912 DEBUG   hellolifefoundation-com_14c6 - openai.agents: Calling LLM
+2026-08-18 16:05:49.138 DEBUG   - - strix.telemetry.posthog: posthog event sent: skill_loaded
+2026-08-18 16:05:49.236 DEBUG   - - strix.telemetry.posthog: posthog event sent: skill_loaded
+2026-08-18 16:05:49.237 DEBUG   - - strix.telemetry.posthog: posthog event sent: skill_loaded
+2026-08-18 16:05:49.299 DEBUG   - - strix.telemetry.posthog: posthog event sent: skill_loaded
+2026-08-18 16:05:50.450 DEBUG   - - strix.telemetry.scarf: scarf event sent: skill_loaded
+2026-08-18 16:05:50.562 DEBUG   - - strix.telemetry.scarf: scarf event sent: skill_loaded
+2026-08-18 16:05:50.644 DEBUG   - - strix.telemetry.scarf: scarf event sent: skill_loaded
+2026-08-18 16:05:50.666 DEBUG   - - strix.telemetry.scarf: scarf event sent: skill_loaded
+2026-08-18 16:05:56.402 INFO    hellolifefoundation-com_14c6 - strix.report.sarif: Wrote SARIF 2.1.0 report: E:\Code\Files\creatorhut\creator-hut\strix_runs\hellolifefoundation-com_14c6\findings.sarif (0 results)
+2026-08-18 16:05:56.402 INFO    hellolifefoundation-com_14c6 - strix.report.state: Essential scan data saved to: E:\Code\Files\creatorhut\creator-hut\strix_runs\hellolifefoundation-com_14c6
+2026-08-18 16:05:56.403 DEBUG   hellolifefoundation-com_14c6 - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-08-18 16:05:56.404 DEBUG   hellolifefoundation-com_14c6 - openai.agents: Turn 1 complete, next_step type=NextStepFinalOutput
+2026-08-18 16:05:56.410 DEBUG   hellolifefoundation-com_14c6 - openai.agents: Resetting current trace
+2026-08-18 16:05:56.411 WARNING hellolifefoundation-com_14c6 - strix.core.execution: agent 4910b5d4 ended a turn without a lifecycle tool call (interactive=True); forcing tool continuation (1/3): {"name": "web_search", "arguments": {"query": "Current CVEs, advisories, and 0-days for hello lifefoundation.com"}}
+2026-08-18 16:05:56.421 DEBUG   hellolifefoundation-com_14c6 - openai.agents: Tracing is disabled. Not creating trace
+2026-08-18 16:05:56.421 DEBUG   hellolifefoundation-com_14c6 - openai.agents: Setting current trace: no-op
+2026-08-18 16:05:56.421 DEBUG   hellolifefoundation-com_14c6 - openai.agents: Tracing is disabled. Not creating span
+2026-08-18 16:05:56.434 DEBUG   hellolifefoundation-com_14c6 - openai.agents: Tracing is disabled. Not creating span
+2026-08-18 16:05:56.434 DEBUG   hellolifefoundation-com_14c6 - openai.agents: Starting turn 1, current_agent=Root Agent
+2026-08-18 16:05:56.434 DEBUG   hellolifefoundation-com_14c6 - openai.agents: Tracing is disabled. Not creating span
+2026-08-18 16:05:56.435 DEBUG   hellolifefoundation-com_14c6 - openai.agents: No conversation_id available for request
+2026-08-18 16:05:56.435 DEBUG   hellolifefoundation-com_14c6 - openai.agents: Tracing is disabled. Not creating span
+2026-08-18 16:05:56.435 DEBUG   hellolifefoundation-com_14c6 - openai.agents: Calling LLM
+2026-08-18 16:06:01.539 INFO    hellolifefoundation-com_14c6 - strix.report.sarif: Wrote SARIF 2.1.0 report: E:\Code\Files\creatorhut\creator-hut\strix_runs\hellolifefoundation-com_14c6\findings.sarif (0 results)
+2026-08-18 16:06:01.540 INFO    hellolifefoundation-com_14c6 - strix.report.state: Essential scan data saved to: E:\Code\Files\creatorhut\creator-hut\strix_runs\hellolifefoundation-com_14c6
+2026-08-18 16:06:01.540 DEBUG   hellolifefoundation-com_14c6 - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-08-18 16:06:01.540 DEBUG   hellolifefoundation-com_14c6 - openai.agents: Turn 1 complete, next_step type=NextStepFinalOutput
+2026-08-18 16:06:01.545 DEBUG   hellolifefoundation-com_14c6 - openai.agents: Resetting current trace
+2026-08-18 16:06:01.546 WARNING hellolifefoundation-com_14c6 - strix.core.execution: agent 4910b5d4 ended a turn without a lifecycle tool call (interactive=True); forcing tool continuation (2/3): {"name": "wait_for_agents", "arguments": {"reason": "Waiting for agent to complete task.", "timeout_seconds": 120}}
+2026-08-18 16:06:01.554 DEBUG   hellolifefoundation-com_14c6 - openai.agents: Tracing is disabled. Not creating trace
+2026-08-18 16:06:01.555 DEBUG   hellolifefoundation-com_14c6 - openai.agents: Setting current trace: no-op
+2026-08-18 16:06:01.555 DEBUG   hellolifefoundation-com_14c6 - openai.agents: Tracing is disabled. Not creating span
+2026-08-18 16:06:01.565 DEBUG   hellolifefoundation-com_14c6 - openai.agents: Tracing is disabled. Not creating span
+2026-08-18 16:06:01.565 DEBUG   hellolifefoundation-com_14c6 - openai.agents: Starting turn 1, current_agent=Root Agent
+2026-08-18 16:06:01.565 DEBUG   hellolifefoundation-com_14c6 - openai.agents: Tracing is disabled. Not creating span
+2026-08-18 16:06:01.565 DEBUG   hellolifefoundation-com_14c6 - openai.agents: No conversation_id available for request
+2026-08-18 16:06:01.565 DEBUG   hellolifefoundation-com_14c6 - openai.agents: Tracing is disabled. Not creating span
+2026-08-18 16:06:01.566 DEBUG   hellolifefoundation-com_14c6 - openai.agents: Calling LLM
+2026-08-18 16:06:04.168 INFO    hellolifefoundation-com_14c6 - strix.report.sarif: Wrote SARIF 2.1.0 report: E:\Code\Files\creatorhut\creator-hut\strix_runs\hellolifefoundation-com_14c6\findings.sarif (0 results)
+2026-08-18 16:06:04.168 INFO    hellolifefoundation-com_14c6 - strix.report.state: Essential scan data saved to: E:\Code\Files\creatorhut\creator-hut\strix_runs\hellolifefoundation-com_14c6
+2026-08-18 16:06:04.169 DEBUG   hellolifefoundation-com_14c6 - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-08-18 16:06:04.169 DEBUG   hellolifefoundation-com_14c6 - openai.agents: Turn 1 complete, next_step type=NextStepFinalOutput
+2026-08-18 16:06:04.175 DEBUG   hellolifefoundation-com_14c6 - openai.agents: Resetting current trace
+2026-08-18 16:06:04.175 WARNING hellolifefoundation-com_14c6 - strix.core.execution: agent 4910b5d4 ended a turn without a lifecycle tool call (interactive=True); forcing tool continuation (3/3): {"name": "view_agent_graph", "arguments": {}}
+2026-08-18 16:06:04.175 WARNING hellolifefoundation-com_14c6 - strix.core.execution: agent 4910b5d4 exhausted tool-call recovery attempts; parking until a message arrives
+2026-08-18 16:06:04.175 INFO    hellolifefoundation-com_14c6 - strix.core.agents: agent.status 4910b5d4=waiting
