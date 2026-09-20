@@ -849,17 +849,40 @@ function Page() {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "brand-grid-container",
+                        style: {
+                            display: 'flex',
+                            flexWrap: 'wrap',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            gap: '2rem',
+                            maxWidth: '1200px',
+                            margin: '4rem auto 0',
+                            width: '100%',
+                            position: 'relative'
+                        },
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "brand-logo-item reveal delay-1",
+                                style: {
+                                    flex: '0 0 auto',
+                                    width: '160px',
+                                    height: '100px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center'
+                                },
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                    src: "assets/brands/IMG_7822.jpeg",
-                                    alt: "Brand"
+                                    src: "/assets/brands/IMG_7822.jpeg",
+                                    alt: "Brand",
+                                    style: {
+                                        maxWidth: '100%',
+                                        maxHeight: '100%',
+                                        objectFit: 'contain',
+                                        mixBlendMode: 'multiply'
+                                    }
                                 }, void 0, false, {
                                     fileName: "[project]/app/page.tsx",
                                     lineNumber: 380,
-                                    columnNumber: 61
+                                    columnNumber: 145
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/page.tsx",
@@ -867,14 +890,27 @@ function Page() {
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "brand-logo-item reveal delay-1",
+                                style: {
+                                    flex: '0 0 auto',
+                                    width: '160px',
+                                    height: '100px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center'
+                                },
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                    src: "assets/brands/IMG_7823.jpeg",
-                                    alt: "Brand"
+                                    src: "/assets/brands/IMG_7823.jpeg",
+                                    alt: "Brand",
+                                    style: {
+                                        maxWidth: '100%',
+                                        maxHeight: '100%',
+                                        objectFit: 'contain',
+                                        mixBlendMode: 'multiply'
+                                    }
                                 }, void 0, false, {
                                     fileName: "[project]/app/page.tsx",
                                     lineNumber: 381,
-                                    columnNumber: 61
+                                    columnNumber: 145
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/page.tsx",
@@ -882,14 +918,27 @@ function Page() {
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "brand-logo-item reveal delay-1",
+                                style: {
+                                    flex: '0 0 auto',
+                                    width: '160px',
+                                    height: '100px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center'
+                                },
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                    src: "assets/brands/IMG_7824.png",
-                                    alt: "Brand"
+                                    src: "/assets/brands/IMG_7824.png",
+                                    alt: "Brand",
+                                    style: {
+                                        maxWidth: '100%',
+                                        maxHeight: '100%',
+                                        objectFit: 'contain',
+                                        mixBlendMode: 'multiply'
+                                    }
                                 }, void 0, false, {
                                     fileName: "[project]/app/page.tsx",
                                     lineNumber: 382,
-                                    columnNumber: 61
+                                    columnNumber: 145
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/page.tsx",
@@ -897,14 +946,27 @@ function Page() {
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "brand-logo-item reveal delay-1",
+                                style: {
+                                    flex: '0 0 auto',
+                                    width: '160px',
+                                    height: '100px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center'
+                                },
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                    src: "assets/brands/IMG_7825.webp",
-                                    alt: "Brand"
+                                    src: "/assets/brands/IMG_7825.webp",
+                                    alt: "Brand",
+                                    style: {
+                                        maxWidth: '100%',
+                                        maxHeight: '100%',
+                                        objectFit: 'contain',
+                                        mixBlendMode: 'multiply'
+                                    }
                                 }, void 0, false, {
                                     fileName: "[project]/app/page.tsx",
                                     lineNumber: 383,
-                                    columnNumber: 61
+                                    columnNumber: 145
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/page.tsx",
@@ -912,14 +974,27 @@ function Page() {
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "brand-logo-item reveal delay-2",
+                                style: {
+                                    flex: '0 0 auto',
+                                    width: '160px',
+                                    height: '100px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center'
+                                },
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                    src: "assets/brands/IMG_7826.png",
-                                    alt: "Brand"
+                                    src: "/assets/brands/IMG_7826.png",
+                                    alt: "Brand",
+                                    style: {
+                                        maxWidth: '100%',
+                                        maxHeight: '100%',
+                                        objectFit: 'contain',
+                                        mixBlendMode: 'multiply'
+                                    }
                                 }, void 0, false, {
                                     fileName: "[project]/app/page.tsx",
                                     lineNumber: 384,
-                                    columnNumber: 61
+                                    columnNumber: 145
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/page.tsx",
@@ -927,14 +1002,27 @@ function Page() {
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "brand-logo-item reveal delay-2",
+                                style: {
+                                    flex: '0 0 auto',
+                                    width: '160px',
+                                    height: '100px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center'
+                                },
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                    src: "assets/brands/IMG_7827.png",
-                                    alt: "Brand"
+                                    src: "/assets/brands/IMG_7827.png",
+                                    alt: "Brand",
+                                    style: {
+                                        maxWidth: '100%',
+                                        maxHeight: '100%',
+                                        objectFit: 'contain',
+                                        mixBlendMode: 'multiply'
+                                    }
                                 }, void 0, false, {
                                     fileName: "[project]/app/page.tsx",
                                     lineNumber: 385,
-                                    columnNumber: 61
+                                    columnNumber: 145
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/page.tsx",
@@ -942,14 +1030,27 @@ function Page() {
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "brand-logo-item reveal delay-2",
+                                style: {
+                                    flex: '0 0 auto',
+                                    width: '160px',
+                                    height: '100px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center'
+                                },
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                    src: "assets/brands/IMG_7828.png",
-                                    alt: "Brand"
+                                    src: "/assets/brands/IMG_7828.png",
+                                    alt: "Brand",
+                                    style: {
+                                        maxWidth: '100%',
+                                        maxHeight: '100%',
+                                        objectFit: 'contain',
+                                        mixBlendMode: 'multiply'
+                                    }
                                 }, void 0, false, {
                                     fileName: "[project]/app/page.tsx",
                                     lineNumber: 386,
-                                    columnNumber: 61
+                                    columnNumber: 145
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/page.tsx",
@@ -957,14 +1058,27 @@ function Page() {
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "brand-logo-item reveal delay-2",
+                                style: {
+                                    flex: '0 0 auto',
+                                    width: '160px',
+                                    height: '100px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center'
+                                },
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                    src: "assets/brands/IMG_7830.png",
-                                    alt: "Brand"
+                                    src: "/assets/brands/IMG_7830.png",
+                                    alt: "Brand",
+                                    style: {
+                                        maxWidth: '100%',
+                                        maxHeight: '100%',
+                                        objectFit: 'contain',
+                                        mixBlendMode: 'multiply'
+                                    }
                                 }, void 0, false, {
                                     fileName: "[project]/app/page.tsx",
                                     lineNumber: 387,
-                                    columnNumber: 61
+                                    columnNumber: 145
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/page.tsx",
@@ -972,14 +1086,27 @@ function Page() {
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "brand-logo-item reveal delay-2",
+                                style: {
+                                    flex: '0 0 auto',
+                                    width: '160px',
+                                    height: '100px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center'
+                                },
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                    src: "assets/brands/IMG_7831.jpeg",
-                                    alt: "Brand"
+                                    src: "/assets/brands/IMG_7831.jpeg",
+                                    alt: "Brand",
+                                    style: {
+                                        maxWidth: '100%',
+                                        maxHeight: '100%',
+                                        objectFit: 'contain',
+                                        mixBlendMode: 'multiply'
+                                    }
                                 }, void 0, false, {
                                     fileName: "[project]/app/page.tsx",
                                     lineNumber: 388,
-                                    columnNumber: 61
+                                    columnNumber: 145
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/page.tsx",
@@ -987,14 +1114,27 @@ function Page() {
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "brand-logo-item reveal delay-3",
+                                style: {
+                                    flex: '0 0 auto',
+                                    width: '160px',
+                                    height: '100px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center'
+                                },
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                    src: "assets/brands/IMG_7840.avif",
-                                    alt: "Brand"
+                                    src: "/assets/brands/IMG_7840.avif",
+                                    alt: "Brand",
+                                    style: {
+                                        maxWidth: '100%',
+                                        maxHeight: '100%',
+                                        objectFit: 'contain',
+                                        mixBlendMode: 'multiply'
+                                    }
                                 }, void 0, false, {
                                     fileName: "[project]/app/page.tsx",
                                     lineNumber: 389,
-                                    columnNumber: 61
+                                    columnNumber: 145
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/page.tsx",
@@ -1002,14 +1142,27 @@ function Page() {
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "brand-logo-item reveal delay-3",
+                                style: {
+                                    flex: '0 0 auto',
+                                    width: '160px',
+                                    height: '100px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center'
+                                },
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                    src: "assets/brands/IMG_7841.png",
-                                    alt: "Brand"
+                                    src: "/assets/brands/IMG_7841.png",
+                                    alt: "Brand",
+                                    style: {
+                                        maxWidth: '100%',
+                                        maxHeight: '100%',
+                                        objectFit: 'contain',
+                                        mixBlendMode: 'multiply'
+                                    }
                                 }, void 0, false, {
                                     fileName: "[project]/app/page.tsx",
                                     lineNumber: 390,
-                                    columnNumber: 61
+                                    columnNumber: 145
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/page.tsx",
@@ -1017,14 +1170,27 @@ function Page() {
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "brand-logo-item reveal delay-3",
+                                style: {
+                                    flex: '0 0 auto',
+                                    width: '160px',
+                                    height: '100px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center'
+                                },
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                    src: "assets/brands/IMG_7842.jpg",
-                                    alt: "Brand"
+                                    src: "/assets/brands/IMG_7842.jpg",
+                                    alt: "Brand",
+                                    style: {
+                                        maxWidth: '100%',
+                                        maxHeight: '100%',
+                                        objectFit: 'contain',
+                                        mixBlendMode: 'multiply'
+                                    }
                                 }, void 0, false, {
                                     fileName: "[project]/app/page.tsx",
                                     lineNumber: 391,
-                                    columnNumber: 61
+                                    columnNumber: 145
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/page.tsx",
@@ -1032,14 +1198,27 @@ function Page() {
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "brand-logo-item reveal delay-3",
+                                style: {
+                                    flex: '0 0 auto',
+                                    width: '160px',
+                                    height: '100px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center'
+                                },
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                    src: "assets/brands/IMG_7843.png",
-                                    alt: "Brand"
+                                    src: "/assets/brands/IMG_7843.png",
+                                    alt: "Brand",
+                                    style: {
+                                        maxWidth: '100%',
+                                        maxHeight: '100%',
+                                        objectFit: 'contain',
+                                        mixBlendMode: 'multiply'
+                                    }
                                 }, void 0, false, {
                                     fileName: "[project]/app/page.tsx",
                                     lineNumber: 392,
-                                    columnNumber: 61
+                                    columnNumber: 145
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/page.tsx",
@@ -1047,14 +1226,27 @@ function Page() {
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "brand-logo-item reveal delay-3",
+                                style: {
+                                    flex: '0 0 auto',
+                                    width: '160px',
+                                    height: '100px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center'
+                                },
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                    src: "assets/brands/IMG_7844.png",
-                                    alt: "Brand"
+                                    src: "/assets/brands/IMG_7844.png",
+                                    alt: "Brand",
+                                    style: {
+                                        maxWidth: '100%',
+                                        maxHeight: '100%',
+                                        objectFit: 'contain',
+                                        mixBlendMode: 'multiply'
+                                    }
                                 }, void 0, false, {
                                     fileName: "[project]/app/page.tsx",
                                     lineNumber: 393,
-                                    columnNumber: 61
+                                    columnNumber: 145
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/page.tsx",
@@ -1062,14 +1254,27 @@ function Page() {
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "brand-logo-item reveal delay-3",
+                                style: {
+                                    flex: '0 0 auto',
+                                    width: '160px',
+                                    height: '100px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center'
+                                },
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                    src: "assets/brands/IMG_7845.png",
-                                    alt: "Brand"
+                                    src: "/assets/brands/IMG_7845.png",
+                                    alt: "Brand",
+                                    style: {
+                                        maxWidth: '100%',
+                                        maxHeight: '100%',
+                                        objectFit: 'contain',
+                                        mixBlendMode: 'multiply'
+                                    }
                                 }, void 0, false, {
                                     fileName: "[project]/app/page.tsx",
                                     lineNumber: 394,
-                                    columnNumber: 61
+                                    columnNumber: 145
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/page.tsx",
@@ -1077,14 +1282,27 @@ function Page() {
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "brand-logo-item reveal delay-3",
+                                style: {
+                                    flex: '0 0 auto',
+                                    width: '160px',
+                                    height: '100px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center'
+                                },
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                    src: "assets/brands/IMG_7846.jpg",
-                                    alt: "Brand"
+                                    src: "/assets/brands/IMG_7846.jpg",
+                                    alt: "Brand",
+                                    style: {
+                                        maxWidth: '100%',
+                                        maxHeight: '100%',
+                                        objectFit: 'contain',
+                                        mixBlendMode: 'multiply'
+                                    }
                                 }, void 0, false, {
                                     fileName: "[project]/app/page.tsx",
                                     lineNumber: 395,
-                                    columnNumber: 61
+                                    columnNumber: 145
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/page.tsx",
@@ -1092,14 +1310,27 @@ function Page() {
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "brand-logo-item reveal delay-3",
+                                style: {
+                                    flex: '0 0 auto',
+                                    width: '160px',
+                                    height: '100px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center'
+                                },
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                    src: "assets/brands/IMG_7847.jpg",
-                                    alt: "Brand"
+                                    src: "/assets/brands/IMG_7847.jpg",
+                                    alt: "Brand",
+                                    style: {
+                                        maxWidth: '100%',
+                                        maxHeight: '100%',
+                                        objectFit: 'contain',
+                                        mixBlendMode: 'multiply'
+                                    }
                                 }, void 0, false, {
                                     fileName: "[project]/app/page.tsx",
                                     lineNumber: 396,
-                                    columnNumber: 61
+                                    columnNumber: 145
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/page.tsx",
@@ -1107,14 +1338,27 @@ function Page() {
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "brand-logo-item reveal delay-3",
+                                style: {
+                                    flex: '0 0 auto',
+                                    width: '160px',
+                                    height: '100px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center'
+                                },
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                    src: "assets/brands/IMG_7849.png",
-                                    alt: "Brand"
+                                    src: "/assets/brands/IMG_7849.png",
+                                    alt: "Brand",
+                                    style: {
+                                        maxWidth: '100%',
+                                        maxHeight: '100%',
+                                        objectFit: 'contain',
+                                        mixBlendMode: 'multiply'
+                                    }
                                 }, void 0, false, {
                                     fileName: "[project]/app/page.tsx",
                                     lineNumber: 397,
-                                    columnNumber: 61
+                                    columnNumber: 145
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/page.tsx",
@@ -1122,14 +1366,27 @@ function Page() {
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "brand-logo-item reveal delay-3",
+                                style: {
+                                    flex: '0 0 auto',
+                                    width: '160px',
+                                    height: '100px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center'
+                                },
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                    src: "assets/brands/IMG_7850.webp",
-                                    alt: "Brand"
+                                    src: "/assets/brands/IMG_7850.webp",
+                                    alt: "Brand",
+                                    style: {
+                                        maxWidth: '100%',
+                                        maxHeight: '100%',
+                                        objectFit: 'contain',
+                                        mixBlendMode: 'multiply'
+                                    }
                                 }, void 0, false, {
                                     fileName: "[project]/app/page.tsx",
                                     lineNumber: 398,
-                                    columnNumber: 61
+                                    columnNumber: 145
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/page.tsx",
@@ -1137,14 +1394,27 @@ function Page() {
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "brand-logo-item reveal delay-3",
+                                style: {
+                                    flex: '0 0 auto',
+                                    width: '160px',
+                                    height: '100px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center'
+                                },
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                    src: "assets/brands/IMG_7851.jpg",
-                                    alt: "Brand"
+                                    src: "/assets/brands/IMG_7851.jpg",
+                                    alt: "Brand",
+                                    style: {
+                                        maxWidth: '100%',
+                                        maxHeight: '100%',
+                                        objectFit: 'contain',
+                                        mixBlendMode: 'multiply'
+                                    }
                                 }, void 0, false, {
                                     fileName: "[project]/app/page.tsx",
                                     lineNumber: 399,
-                                    columnNumber: 61
+                                    columnNumber: 145
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/page.tsx",

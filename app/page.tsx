@@ -376,27 +376,27 @@ export default function Page() {
             Our Partner Ecosystem
         </p>
         
-        <div className="brand-grid-container">
-            <div className="brand-logo-item reveal delay-1"><img src="assets/brands/IMG_7822.jpeg" alt="Brand" /></div>
-            <div className="brand-logo-item reveal delay-1"><img src="assets/brands/IMG_7823.jpeg" alt="Brand" /></div>
-            <div className="brand-logo-item reveal delay-1"><img src="assets/brands/IMG_7824.png" alt="Brand" /></div>
-            <div className="brand-logo-item reveal delay-1"><img src="assets/brands/IMG_7825.webp" alt="Brand" /></div>
-            <div className="brand-logo-item reveal delay-2"><img src="assets/brands/IMG_7826.png" alt="Brand" /></div>
-            <div className="brand-logo-item reveal delay-2"><img src="assets/brands/IMG_7827.png" alt="Brand" /></div>
-            <div className="brand-logo-item reveal delay-2"><img src="assets/brands/IMG_7828.png" alt="Brand" /></div>
-            <div className="brand-logo-item reveal delay-2"><img src="assets/brands/IMG_7830.png" alt="Brand" /></div>
-            <div className="brand-logo-item reveal delay-2"><img src="assets/brands/IMG_7831.jpeg" alt="Brand" /></div>
-            <div className="brand-logo-item reveal delay-3"><img src="assets/brands/IMG_7840.avif" alt="Brand" /></div>
-            <div className="brand-logo-item reveal delay-3"><img src="assets/brands/IMG_7841.png" alt="Brand" /></div>
-            <div className="brand-logo-item reveal delay-3"><img src="assets/brands/IMG_7842.jpg" alt="Brand" /></div>
-            <div className="brand-logo-item reveal delay-3"><img src="assets/brands/IMG_7843.png" alt="Brand" /></div>
-            <div className="brand-logo-item reveal delay-3"><img src="assets/brands/IMG_7844.png" alt="Brand" /></div>
-            <div className="brand-logo-item reveal delay-3"><img src="assets/brands/IMG_7845.png" alt="Brand" /></div>
-            <div className="brand-logo-item reveal delay-3"><img src="assets/brands/IMG_7846.jpg" alt="Brand" /></div>
-            <div className="brand-logo-item reveal delay-3"><img src="assets/brands/IMG_7847.jpg" alt="Brand" /></div>
-            <div className="brand-logo-item reveal delay-3"><img src="assets/brands/IMG_7849.png" alt="Brand" /></div>
-            <div className="brand-logo-item reveal delay-3"><img src="assets/brands/IMG_7850.webp" alt="Brand" /></div>
-            <div className="brand-logo-item reveal delay-3"><img src="assets/brands/IMG_7851.jpg" alt="Brand" /></div>
+        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', gap: '2rem', maxWidth: '1200px', margin: '4rem auto 0', width: '100%', position: 'relative' }}>
+            <div style={{ flex: '0 0 auto', width: '160px', height: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img src="/assets/brands/IMG_7822.jpeg" alt="Brand" style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', mixBlendMode: 'multiply' }} /></div>
+            <div style={{ flex: '0 0 auto', width: '160px', height: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img src="/assets/brands/IMG_7823.jpeg" alt="Brand" style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', mixBlendMode: 'multiply' }} /></div>
+            <div style={{ flex: '0 0 auto', width: '160px', height: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img src="/assets/brands/IMG_7824.png" alt="Brand" style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', mixBlendMode: 'multiply' }} /></div>
+            <div style={{ flex: '0 0 auto', width: '160px', height: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img src="/assets/brands/IMG_7825.webp" alt="Brand" style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', mixBlendMode: 'multiply' }} /></div>
+            <div style={{ flex: '0 0 auto', width: '160px', height: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img src="/assets/brands/IMG_7826.png" alt="Brand" style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', mixBlendMode: 'multiply' }} /></div>
+            <div style={{ flex: '0 0 auto', width: '160px', height: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img src="/assets/brands/IMG_7827.png" alt="Brand" style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', mixBlendMode: 'multiply' }} /></div>
+            <div style={{ flex: '0 0 auto', width: '160px', height: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img src="/assets/brands/IMG_7828.png" alt="Brand" style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', mixBlendMode: 'multiply' }} /></div>
+            <div style={{ flex: '0 0 auto', width: '160px', height: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img src="/assets/brands/IMG_7830.png" alt="Brand" style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', mixBlendMode: 'multiply' }} /></div>
+            <div style={{ flex: '0 0 auto', width: '160px', height: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img src="/assets/brands/IMG_7831.jpeg" alt="Brand" style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', mixBlendMode: 'multiply' }} /></div>
+            <div style={{ flex: '0 0 auto', width: '160px', height: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img src="/assets/brands/IMG_7840.avif" alt="Brand" style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', mixBlendMode: 'multiply' }} /></div>
+            <div style={{ flex: '0 0 auto', width: '160px', height: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img src="/assets/brands/IMG_7841.png" alt="Brand" style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', mixBlendMode: 'multiply' }} /></div>
+            <div style={{ flex: '0 0 auto', width: '160px', height: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img src="/assets/brands/IMG_7842.jpg" alt="Brand" style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', mixBlendMode: 'multiply' }} /></div>
+            <div style={{ flex: '0 0 auto', width: '160px', height: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img src="/assets/brands/IMG_7843.png" alt="Brand" style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', mixBlendMode: 'multiply' }} /></div>
+            <div style={{ flex: '0 0 auto', width: '160px', height: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img src="/assets/brands/IMG_7844.png" alt="Brand" style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', mixBlendMode: 'multiply' }} /></div>
+            <div style={{ flex: '0 0 auto', width: '160px', height: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img src="/assets/brands/IMG_7845.png" alt="Brand" style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', mixBlendMode: 'multiply' }} /></div>
+            <div style={{ flex: '0 0 auto', width: '160px', height: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img src="/assets/brands/IMG_7846.jpg" alt="Brand" style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', mixBlendMode: 'multiply' }} /></div>
+            <div style={{ flex: '0 0 auto', width: '160px', height: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img src="/assets/brands/IMG_7847.jpg" alt="Brand" style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', mixBlendMode: 'multiply' }} /></div>
+            <div style={{ flex: '0 0 auto', width: '160px', height: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img src="/assets/brands/IMG_7849.png" alt="Brand" style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', mixBlendMode: 'multiply' }} /></div>
+            <div style={{ flex: '0 0 auto', width: '160px', height: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img src="/assets/brands/IMG_7850.webp" alt="Brand" style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', mixBlendMode: 'multiply' }} /></div>
+            <div style={{ flex: '0 0 auto', width: '160px', height: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img src="/assets/brands/IMG_7851.jpg" alt="Brand" style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', mixBlendMode: 'multiply' }} /></div>
         </div>
         <br />
         <p className="text-center reveal delay-1" style={{"fontSize":"1.2rem","letterSpacing":"0.2em","color":"#666","textTransform":"uppercase","fontWeight":"600","marginBottom":"1rem","marginTop":"1rem"}}>

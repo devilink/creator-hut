@@ -210,12 +210,32 @@ body {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
-    mix-blend-mode: multiply;
-    filter: contrast(1.1); /* slightly boost contrast */
     transition: transform 0.3s ease;
 }
 .brand-logo-item:hover img {
-    transform: scale(1.15);
+    transform: scale(1.08);
+}
+
+@media (max-width: 1024px) {
+    .brand-grid-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media (max-width: 768px) {
+    .brand-grid-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
+@media (max-width: 480px) {
+    .brand-grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    .brand-logo-item {
+        max-width: 140px;
+        height: 80px;
+    }
 }
 
 /* LIGHT SECTIONS (Projects, Services, Impact) */
@@ -2071,18 +2091,34 @@ body {
 }
 
 /* OVERRIDE FOR BRAND GRID STRUCTURE */
-.brand-grid-container {
-    display: grid !important;
-    grid-template-columns: repeat(5, 1fr) !important;
-    gap: 2rem !important;
-    max-width: 1200px;
-    margin: 4rem auto 0;
-    align-items: center;
-    justify-items: center;
-}
-.brand-logo-item {
+.brand-marquee-wrapper {
     width: 100%;
-    max-width: 180px;
+    overflow: hidden;
+    position: relative;
+    padding: 1rem 0;
+    margin: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.brand-marquee-row {
+    display: flex;
+    width: fit-content;
+}
+
+.brand-marquee-content {
+    display: flex;
+    align-items: center;
+    animation: marquee 35s linear infinite;
+}
+
+.brand-marquee-content.reverse {
+    animation: marquee-reverse 35s linear infinite;
+}
+
+.brand-marquee-item {
+    width: 180px;
     height: 100px;
 }
 
