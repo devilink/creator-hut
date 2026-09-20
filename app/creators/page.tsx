@@ -3,11 +3,23 @@
 import { useEffect } from 'react';
 import Script from 'next/script';
 
+declare const gsap: any;
+
 export default function Page() {
     useEffect(() => {
         // Wait a bit for external scripts (GSAP) to load if they are not already loaded
         const initScripts = () => {
             try {
+                
+        document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+
                 
         document.addEventListener("DOMContentLoaded", () => {
             const observer = new IntersectionObserver((entries) => {
@@ -26,9 +38,10 @@ export default function Page() {
 
         // Hamburger Menu Logic
         document.querySelectorAll('.hamburger').forEach(btn => {
-            btn.addEventListener('click', function() {
-                this.classList.toggle('active');
-                this.previousElementSibling.classList.toggle('active');
+            btn.addEventListener('click', (e: any) => {
+                const target = e.currentTarget as HTMLElement;
+                target.classList.toggle('active');
+                if (target.previousElementSibling) target.previousElementSibling.classList.toggle('active');
             });
         });
     
@@ -71,19 +84,21 @@ export default function Page() {
             // 2. Magnetic Buttons
             const magneticBtns = document.querySelectorAll('.nav-btn, .explore-btn');
             magneticBtns.forEach(btn => {
-                btn.addEventListener('mousemove', function(e) {
-                    const rect = this.getBoundingClientRect();
+                btn.addEventListener('mousemove', (e: any) => {
+                    const target = e.currentTarget as HTMLElement;
+                    const rect = target.getBoundingClientRect();
                     const x = e.clientX - rect.left - rect.width / 2;
                     const y = e.clientY - rect.top - rect.height / 2;
-                    gsap.to(this, {
+                    gsap.to(target, {
                         x: x * 0.4,
                         y: y * 0.4,
                         duration: 0.3,
                         ease: "power2.out"
                     });
                 });
-                btn.addEventListener('mouseleave', function() {
-                    gsap.to(this, {
+                btn.addEventListener('mouseleave', (e: any) => {
+                    const target = e.currentTarget as HTMLElement;
+                    gsap.to(target, {
                         x: 0,
                         y: 0,
                         duration: 0.5,
@@ -95,8 +110,9 @@ export default function Page() {
             // 4. 3D Tilt on Cards (Creator list items)
             const tiltCards = document.querySelectorAll('.creator-list-item');
             tiltCards.forEach(card => {
-                card.addEventListener('mousemove', function(e) {
-                    const rect = this.getBoundingClientRect();
+                card.addEventListener('mousemove', (e: any) => {
+                    const target = e.currentTarget as HTMLElement;
+                    const rect = target.getBoundingClientRect();
                     const x = e.clientX - rect.left; 
                     const y = e.clientY - rect.top;  
                     
@@ -106,7 +122,7 @@ export default function Page() {
                     const rotateX = ((y - centerY) / centerY) * -5; // max 5 deg for horizontal lists
                     const rotateY = ((x - centerX) / centerX) * 5;
                     
-                    gsap.to(this, {
+                    gsap.to(target, {
                         rotationX: rotateX,
                         rotationY: rotateY,
                         transformPerspective: 1000,
@@ -115,8 +131,9 @@ export default function Page() {
                     });
                 });
                 
-                card.addEventListener('mouseleave', function() {
-                    gsap.to(this, {
+                card.addEventListener('mouseleave', (e: any) => {
+                    const target = e.currentTarget as HTMLElement;
+                    gsap.to(target, {
                         rotationX: 0,
                         rotationY: 0,
                         ease: "power3.out",
