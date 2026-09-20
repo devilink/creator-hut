@@ -285,7 +285,14 @@ export default function Page() {
         };
         
         // Give time for GSAP to be available
-        setTimeout(initScripts, 500);
+        const timeoutId = setTimeout(initScripts, 500);
+
+        return () => {
+            clearTimeout(timeoutId);
+            if (typeof ScrollTrigger !== 'undefined') {
+                ScrollTrigger.getAll().forEach((t: any) => t.kill());
+            }
+        };
     }, []);
 
     return (
